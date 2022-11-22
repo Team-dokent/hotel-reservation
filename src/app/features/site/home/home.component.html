@@ -22,7 +22,7 @@
           <div class="row">
             <div class="col-lg-6">
               <mat-form-field appearance="fill" class="w-100 ">
-                <mat-label class="text-white">Adulte</mat-label>
+                <mat-label class="text-white">Date d'arrivée</mat-label>
                 <mat-select disableRipple class="text-white">
                   <mat-option value="1">Option 1</mat-option>
                   <mat-option value="2">Option 2</mat-option>
@@ -30,7 +30,7 @@
                 </mat-select>
               </mat-form-field>
               <mat-form-field appearance="fill" class="w-100">
-                <mat-label class="text-white">Adulte</mat-label>
+                <mat-label class="text-white">Date de départ</mat-label>
                 <mat-select disableRipple>
                   <mat-option value="1">Option 1</mat-option>
                   <mat-option value="2">Option 2</mat-option>
@@ -48,7 +48,7 @@
                 </mat-select>
               </mat-form-field>
               <mat-form-field appearance="fill" class="w-100">
-                <mat-label class="text-white">Adulte</mat-label>
+                <mat-label class="text-white">Enfant</mat-label>
                 <mat-select disableRipple>
                   <mat-option value="1">Option 1</mat-option>
                   <mat-option value="2">Option 2</mat-option>
@@ -62,7 +62,7 @@
           <div class="row">
             <div class="col-lg-12 mx-4 mb-2">
               <mat-form-field appearance="fill" class="p-0 w-100 ">
-                <mat-label class="text-white">Adulte</mat-label>
+                <mat-label class="text-white">Chambre</mat-label>
                 <mat-select disableRipple>
                   <mat-option value="1">Option 1</mat-option>
                   <mat-option value="2">Option 2</mat-option>
@@ -124,7 +124,12 @@
       </div>
 
       <div class="col-lg-6 col-md-6 col-12 mt-5">
-        <swiper [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" [loop]="true" [autoplay]="{
+        <swiper 
+            [slidesPerView]="1" 
+            [spaceBetween]="10" 
+            [navigation]="true" 
+            [loop]="true" 
+            [autoplay]="{
             delay: 2500,
             disableOnInteraction: false
           }" [pagination]="{ clickable: true }">
@@ -155,45 +160,61 @@
   </div>
 </section>
 
-
-<section class="mt-25" id="price">
+<section class="mt-25 bg-secondary py-5" id="differencePrice">
   <div class="container ">
     <h2 class="text-dark text-center h1">Nos differents prix</h2>
-    <hr class="w-25 bg-dark fw-bold text-center " style="height:5px;">
     <div class="row">
       <swiper 
-            [slidesPerView]="5"
+            [slidesPerGroup]="1"
+            [centeredSlides] ="true"
+            [loop]= true
             [pagination]="{
             clickable: true}" 
-            [navigation]="true" class="mySwiper">
+            [navigation]="true" class="mySwiper"
+            [breakpoints]="{
+              '640': {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              '768': {
+                slidesPerView: 4,
+                spaceBetween: 40
+              },
+              '1024': {
+                slidesPerView: 5,
+                spaceBetween: 25
+              }
+            }"
 
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/05/Hotelchamp-Expert-Partner-320x202.png" alt="">
+            >
+
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/05/Hotelchamp-Expert-Partner-320x202.png" class="rounded m-3" alt="">
         </ng-template>
 
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/05/Roomdex-Expert-Partner-320x202.png" alt="">
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/05/Roomdex-Expert-Partner-320x202.png" class="rounded m-3" alt="">
         </ng-template>
         
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/05/The-Hotels-Network-Expert-Partner-320x202.png"
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/05/The-Hotels-Network-Expert-Partner-320x202.png" class="rounded m-3"
             alt="">
         </ng-template>
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/11/Cloudbeds-Expert-Partner-320x202.png" alt="">
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/11/Cloudbeds-Expert-Partner-320x202.png" class="rounded m-3" alt="">
         </ng-template>
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/05/The-Hotels-Network-Expert-Partner-320x202.png"
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/05/The-Hotels-Network-Expert-Partner-320x202.png" class="rounded m-3"
             alt="">
         </ng-template>
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/Atomize-Expert-Partner-320x202.png" alt="">
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/Atomize-Expert-Partner-320x202.png" alt="" class="rounded m-3">
         </ng-template>
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/11/RTFG-Expert-Partner-v2-320x202.png" alt="">
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/11/RTFG-Expert-Partner-v2-320x202.png" class="rounded m-3" alt="">
         </ng-template>
-        <ng-template swiperSlide class="card">
-          <img src="https://www.revfine.com/wp-content/uploads/2022/05/Roomdex-Expert-Partner-320x202.png" alt="">
+        <ng-template swiperSlide >
+          <img src="https://www.revfine.com/wp-content/uploads/2022/05/Roomdex-Expert-Partner-320x202.png" class="rounded m-3" alt="">
         </ng-template>
       </swiper>
     </div>
@@ -201,6 +222,166 @@
 </section>
 
 
+
+
+
+<section class="mt-25 py-5" id="romeSuite" style="
+  background-image: url(https://zcube.in/riorelax/img/bg/testimonial-bg.png);
+  background-size: cover;background-attachment: fixed;">
+  <div class="container ">
+    <h2 class="text-dark text-center h1">Chambres & Suites</h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-6">
+        <div class="test-card">
+       
+            <img class="text-card-img" src="https://www.bulgarihotels.com/.imaging/bhr-standard-small-jpg/dam/DUBAI/Spa-and-Fitness/the-bulgari-spa-1.jpg/jcr%3Acontent" /> 
+          
+          <div class="test-card-content">
+            <p>Detail</p>
+            <hr>
+            <div class="test-card-hidden-icon">
+              <span class="icon">1</span>
+              <span class="icon">2</span>
+              <span class="icon">3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="rooms1 section-padding bg-cream" data-scroll-index="1">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="section-subtitle">The Cappa Luxury Hotel</div>
+              <div class="section-title">Rooms &amp; Suites</div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-4">
+              <div class="item">
+                  <div class="position-re o-hidden"> <img src="https://duruthemes.com/demo/html/cappa/demo7/img/rooms/1.jpg" alt=""> </div> <span class="category"><a href="#">Book</a></span>
+                  <div class="con">
+                      <h6><a href="room-details.html">150$ / Night</a></h6>
+                      <h5><a href="room-details.html">Junior Suite</a> </h5>
+                      <div class="line"></div>
+                      <div class="row facilities">
+                          <div class="col col-md-7">
+                              <ul>
+                                  <li><i class="flaticon-bed"></i></li>
+                                  <li><i class="flaticon-bath"></i></li>
+                                  <li><i class="flaticon-breakfast"></i></li>
+                                  <li><i class="flaticon-towel"></i></li>
+                              </ul>
+                          </div>
+                          <div class="col col-md-5 text-right">
+                              <div class="permalink"><a href="room-details.html">Details <i class="ti-arrow-right"></i></a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="item">
+                  <div class="position-re o-hidden"> <img src="https://duruthemes.com/demo/html/cappa/demo7/img/rooms/2.jpg" alt=""> </div> <span class="category"><a href="rooms2.html">Book</a></span>
+                  <div class="con">
+                      <h6><a href="room-details.html">200$ / Night</a></h6>
+                      <h5><a href="room-details.html">Family Room</a></h5>
+                      <div class="line"></div>
+                      <div class="row facilities">
+                          <div class="col col-md-7">
+                              <ul>
+                                  <li><i class="flaticon-bed"></i></li>
+                                  <li><i class="flaticon-bath"></i></li>
+                                  <li><i class="flaticon-breakfast"></i></li>
+                                  <li><i class="flaticon-towel"></i></li>
+                              </ul>
+                          </div>
+                          <div class="col col-md-5 text-right">
+                              <div class="permalink"><a href="room-details.html">Details <i class="ti-arrow-right"></i></a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="item">
+                  <div class="position-re o-hidden"> <img src="https://duruthemes.com/demo/html/cappa/demo7/img/rooms/3.jpg" alt=""> </div> <span class="category"><a href="rooms2.html">Book</a></span>
+                  <div class="con">
+                      <h6><a href="room-details.html">250$ / Night</a></h6>
+                      <h5><a href="room-details.html">Double Room</a></h5>
+                      <div class="line"></div>
+                      <div class="row facilities">
+                          <div class="col col-md-7">
+                              <ul>
+                                  <li><i class="flaticon-bed"></i></li>
+                                  <li><i class="flaticon-bath"></i></li>
+                                  <li><i class="flaticon-breakfast"></i></li>
+                                  <li><i class="flaticon-towel"></i></li>
+                              </ul>
+                          </div>
+                          <div class="col col-md-5 text-right">
+                              <div class="permalink"><a href="room-details.html">Details <i class="ti-arrow-right"></i></a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="item">
+                  <div class="position-re o-hidden"> <img src="https://duruthemes.com/demo/html/cappa/demo7/img/rooms/4.jpg" alt=""> </div> <span class="category"><a href="rooms2.html">Book</a></span>
+                  <div class="con">
+                      <h6><a href="room-details.html">300$ / Night</a></h6>
+                      <h5><a href="room-details.html">Deluxe Room</a></h5>
+                      <div class="line"></div>
+                      <div class="row facilities">
+                          <div class="col col-md-7">
+                              <ul>
+                                  <li><i class="flaticon-bed"></i></li>
+                                  <li><i class="flaticon-bath"></i></li>
+                                  <li><i class="flaticon-breakfast"></i></li>
+                                  <li><i class="flaticon-towel"></i></li>
+                              </ul>
+                          </div>
+                          <div class="col col-md-5 text-right">
+                              <div class="permalink"><a href="room-details.html">Details <i class="ti-arrow-right"></i></a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="item">
+                  <div class="position-re o-hidden"> <img src="https://duruthemes.com/demo/html/cappa/demo7/img/rooms/7.jpg" alt=""> </div> <span class="category"><a href="rooms2.html">Book</a></span>
+                  <div class="con">
+                      <h6><a href="room-details.html">150$ / Night</a></h6>
+                      <h5><a href="room-details.html">Superior Room</a></h5>
+                      <div class="line"></div>
+                      <div class="row facilities">
+                          <div class="col col-md-7">
+                              <ul>
+                                  <li><i class="flaticon-bed"></i></li>
+                                  <li><i class="flaticon-bath"></i></li>
+                                  <li><i class="flaticon-breakfast"></i></li>
+                                  <li><i class="flaticon-towel"></i></li>
+                              </ul>
+                          </div>
+                          <div class="col col-md-5 text-right">
+                              <div class="permalink"><a href="room-details.html">Details <i class="ti-arrow-right"></i></a></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section style="margin-top: 25rem;">
+dsfdfdfd</section>
 <br>
 <br>
 <br>

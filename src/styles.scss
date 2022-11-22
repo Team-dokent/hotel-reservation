@@ -5,6 +5,7 @@ $primary : #f3c300 ;
 $secondary : #1d1d1c;
 $red: #F44336;
 $white : #fff;
+$legth : #EEEEEE;
 html, body { height: 100%; }
 body { 
     margin: 0; 
@@ -13,6 +14,10 @@ body {
 
 .bg-yellow{
     background-color: $primary !important;
+}
+
+.bg-dark{
+    background-color: $secondary !important;
 }
 .text-yellow {
     color: $primary !important;
