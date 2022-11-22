@@ -16,7 +16,7 @@ li {
   display: flex;
 }
 
-p {
+.link-folder-text {
   padding: 5px;
 }
 .nav-links {
@@ -49,5 +49,15 @@ p {
       padding-top: 5px;
       border: 3px slid black;
     }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .link-folder-text {
+    display: none;
+  }
+
+  .mat-sidenav {
+    width: 60px;
   }
 }
