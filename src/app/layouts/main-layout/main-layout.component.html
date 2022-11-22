@@ -1,0 +1,27 @@
+<main>
+  <app-toolbar (openedEvent)="toggleMenu($event)"></app-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+      <div class="nav-links">
+        <ul>
+          <a>
+            <li routerLink="home" routerLinkActive="active">
+              <mat-icon matListItemIcon>person</mat-icon>
+              <p class="link-folder-text">Home</p>
+            </li>
+
+            <li routerLink="dashboard" routerLinkActive="active">
+              <mat-icon matListItemIcon>home</mat-icon>
+              <p class="link-folder-text">Dashboard</p>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="px-3 pb-4">
+        <ng-content></ng-content>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</main>
