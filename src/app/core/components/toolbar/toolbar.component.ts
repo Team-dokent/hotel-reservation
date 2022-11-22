@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MenuService } from '../../services/menu/menu.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
-  opened: boolean = false;
+  opened!: boolean;
+  @Output() openedEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {}
+  constructor(private menuService: MenuService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.opened = this.menuService.opened;
+  }
+
+  toggleMenuEvent() {
+    this.opened = this.menuService.toggleMenu();
+    this.openedEvent.emit(this.opened);
+  }
 }
