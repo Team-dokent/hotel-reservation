@@ -8,6 +8,7 @@ import { MenuService } from '../../services/menu/menu.service';
 })
 export class ToolbarComponent implements OnInit {
   opened!: boolean;
+
   @Output() openedEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor(private menuService: MenuService) {}
