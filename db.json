@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "hotel-manager@test.com",
+      "password": "123456789",
+      "role": "hotel-manager"
+    },
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "hotel-reservations-manager@test.com",
+      "password": "123456789",
+      "role": "hotel-reservations-manager"
+    },
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "project-manager@test.com",
+      "password": "123456789",
+      "role": "project-manager"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
