@@ -9,10 +9,15 @@ const routes: Routes = [
       m => m.SiteModule
     )
   },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./features/admin/admin.module').then((m) => m.AdminModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -5,17 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
-import { HeaderComponent } from './core/components/site/header/header.component';
-import { FooterComponent } from './core/components/site/footer/footer.component';
 import { SiteModule } from './features/site/site.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
     declarations: [
-      AppComponent, 
-      HeaderComponent, 
-      FooterComponent
-     
+      AppComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -24,7 +20,9 @@ import { SiteModule } from './features/site/site.module';
         AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule,
-        SiteModule
+        SiteModule,
+        FormsModule,
     ]
-})
+
+ })
 export class AppModule {}
