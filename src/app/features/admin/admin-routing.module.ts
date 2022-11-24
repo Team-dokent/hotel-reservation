@@ -9,6 +9,11 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       {
+        path: 'users',
+        loadChildren: () =>
+          import('./users/users.module').then((m) => m.UsersModule),
+      },
+      {
         path: 'home',
         loadChildren: () =>
           import('./home/home.module').then((m) => m.HomeModule),

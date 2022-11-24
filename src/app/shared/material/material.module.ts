@@ -11,6 +11,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const materialModules = [
   MatButtonModule,
@@ -26,6 +28,8 @@ const materialModules = [
   MatInputModule,
   MatMenuModule,
   MatSnackBarModule,
+  MatTableModule,
+  MatPaginatorModule,
 ];
 
 @NgModule({
