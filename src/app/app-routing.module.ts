@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
-  { path: '', redirectTo: 'admin', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: 'home', loadChildren: () => import('./features/site/site.module').then(
+      m => m.SiteModule
+    )
+  },
   {
     path: 'admin',
     loadChildren: () =>

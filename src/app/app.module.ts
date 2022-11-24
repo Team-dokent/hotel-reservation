@@ -5,18 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
+import { SiteModule } from './features/site/site.module';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MaterialModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+    declarations: [
+      AppComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        SiteModule,
+        FormsModule,
+    ]
+
+ })
 export class AppModule {}
