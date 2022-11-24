@@ -1,31 +1,23 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../../models/user';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TokenService {
-  constructor() {}
+  constructor(private router: Router) {}
 
-  saveToken(token: string): void {
-    localStorage.setItem('token', token);
+  saveToken(user: User): void {
+    localStorage.setItem('user', JSON.stringify(user));
   }
-
-  // isLogged(): boolean {
-  //   const token = localStorage.getItem('token')
-  //   return !! token
-  // }
 
   isLogged(): boolean {
     const user = localStorage.getItem('user');
-    if (user) {
-      return true;
-    } else {
-      return false;
-    }
-    // return !! user
+    return !!user;
   }
 
   clearToken(): void {
-    localStorage.removeItem('token');
+    localStorage.removeItem('user');
   }
 }

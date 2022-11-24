@@ -29,7 +29,6 @@ export class AuthGuard implements CanActivate {
       return true;
     } else {
       console.log('benthe');
-
       return this.router.navigate(['auth']);
     }
   }
