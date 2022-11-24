@@ -3,12 +3,19 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginFormValues } from 'src/app/shared/interfaces/login/login';
 import { User } from '../../models/user';
+import { TokenService } from '../token/token.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private tokenService: TokenService
+  ) {}
+
+  message!: string;
 
   login(data: LoginFormValues) {
     this.http
@@ -20,11 +27,10 @@ export class AuthService {
         );
 
         if (user) {
-          alert('success');
-          localStorage.setItem('user', JSON.stringify(user));
+          this.tokenService.saveToken(user);
           this.router.navigate(['admin/dashboard']);
         } else {
-          alert('failed');
+          this.message = "Cet utilisateur n'existe pas";
         }
       });
   }
