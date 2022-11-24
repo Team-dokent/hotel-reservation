@@ -7,22 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { SiteModule } from './features/site/site.module';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    declarations: [
-      AppComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MaterialModule,
-        SiteModule,
-        FormsModule,
-    ]
-
- })
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MaterialModule,
+    HttpClientModule,
+    SiteModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+})
 export class AppModule {}
