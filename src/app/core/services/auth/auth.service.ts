@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginFormValues } from 'src/app/shared/interfaces/login/login';
 import { User } from '../../models/user';
 
@@ -7,7 +8,7 @@ import { User } from '../../models/user';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   login(data: LoginFormValues) {
     this.http
@@ -21,6 +22,7 @@ export class AuthService {
         if (user) {
           alert('success');
           localStorage.setItem('user', JSON.stringify(user));
+          this.router.navigate(['admin/dashboard']);
         } else {
           alert('failed');
         }

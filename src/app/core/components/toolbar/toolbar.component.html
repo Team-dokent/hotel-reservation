@@ -12,6 +12,14 @@
     class="example-icon"
     aria-label="Example icon-button with share icon"
   >
-    <mat-icon class="mr-2">account_circle</mat-icon>
+    <mat-icon mat-button [matMenuTriggerFor]="menu" class="mr-2"
+      >account_circle</mat-icon
+    >
+    <span class="material-icons-outlined"> logout </span>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon matListItemIcon>logout</mat-icon>Deconnection
+      </button>
+    </mat-menu>
   </button>
 </mat-toolbar>
