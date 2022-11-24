@@ -6,17 +6,20 @@
 
 
 .header_area {
-    position: absolute;
+    
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 20;
+   
   }
   
   .navbar {
     padding: 0px;
     border: 0px;
     border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px ;
   }
   
   .navbar {

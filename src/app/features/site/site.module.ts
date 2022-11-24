@@ -6,6 +6,7 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
 import { HomeComponent } from './home/home.component';
 import { SwiperModule } from 'swiper/angular';
 
+
 @NgModule({
   declarations: [
    HomeComponent
@@ -15,6 +16,7 @@ import { SwiperModule } from 'swiper/angular';
     SiteRoutingModule,
     MaterialModule,
     SwiperModule
+
    
   ]
 })
