@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { MatDialog } from '@angular/material/dialog';
 
 export interface PeriodicElement {
   name: string;
@@ -27,7 +29,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-  constructor() {}
+  animal!: string;
+  name!: string;
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 
@@ -37,5 +42,17 @@ export class UsersComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(UserFormComponent, {
+      width: '500px',
+      data: { name: this.name, animal: this.animal },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
   }
 }

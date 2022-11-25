@@ -9,10 +9,8 @@ import { AuthService } from 'src/app/core/services/auth/auth.service';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
-  MatSnackBarRef,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-import { SnackBarComponent } from 'src/app/shared/components/snack-bar/snack-bar/snack-bar.component';
 
 @Component({
   selector: 'app-login',

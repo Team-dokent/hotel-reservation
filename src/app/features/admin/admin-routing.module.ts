@@ -18,11 +18,17 @@ const routes: Routes = [
         loadChildren: () =>
           import('./home/home.module').then((m) => m.HomeModule),
       },
-
       {
         path: 'dashboard',
         loadChildren: () =>
           import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      },
+      {
+        path: 'reservations',
+        loadChildren: () =>
+          import('./reservations/reservations.module').then(
+            (m) => m.ReservationsModule
+          ),
       },
     ],
   },
