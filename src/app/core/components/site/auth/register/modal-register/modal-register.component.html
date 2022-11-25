@@ -1,0 +1,54 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdropRegister" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropRegister" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content pt-5">
+        <form action="">
+        
+            <div class="container">
+                <div class="row ">
+                    <button mat-mini-fab color="warn" class="ms-auto mx-4" data-bs-dismiss="modal" aria-label="Close">
+                        <mat-icon>clear</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div>
+                                <img src="https://as1.ftcdn.net/v2/jpg/04/20/72/12/1000_F_420721237_5yKWb3b6cNfuURrzZY7DsUqNx6LBgSTc.jpg" style="object-fit: cover;" class="w-100 " height="300" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <h2 class="text-dark">Inscrivez-vous à Paradis hôtel</h2>
+                                <p>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Nom utilisateur / E-mail</mat-label>
+                                        <input matInput placeholder="exp : aubembali@gmail.com" required>
+                                        <mat-icon matSuffix>perm_identity</mat-icon>
+                                    </mat-form-field>
+                                </p>
+
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Mot de passe</mat-label>
+                                    <input matInput placeholder="******" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    <!-- <mat-hint *ngIf="!passwordInput.value">Enter your password</mat-hint> -->
+                                </mat-form-field>
+
+                                <p>
+                                    <mat-checkbox class="text-danger" >Se souvenir de moi</mat-checkbox>
+                                </p>
+                                <button type="submit" mat-raised-button class="bg-yellow text-white w-100" >S'inscire</button>
+                                <p class="text-center pt-3">
+                                   <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#staticBackdropReset"> Vous avez oublié votre mot de passe ?</a>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </form>
+      </div>
+    </div>
+</div>

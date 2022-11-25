@@ -22,3 +22,21 @@ body {
 .text-yellow {
     color: $primary !important;
 }
+section .h1 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+
+.bg-secondary {
+    background-color: $legth !important;
+  
+}
+
+
+.bg-red{
+    background-color: $red;
+  }
+  

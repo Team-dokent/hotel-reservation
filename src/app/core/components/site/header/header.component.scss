@@ -1,5 +1,8 @@
 /*============== header css =============*/
 
+.active{
+  color: #fab915 !important; 
+}
 .navbar .menu_nav .nav-item:hover .nav-link, .navbar .menu_nav .nav-item.active .nav-link {
   color: #fab915;
 }
