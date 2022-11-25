@@ -91,7 +91,12 @@
 
   <div mat-dialog-actions align="end">
     <button mat-button (click)="onNoClick()">Annuler</button>
-    <button mat-raised-button color="primary" (click)="onSubmit()">
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="form.invalid"
+      (click)="onSubmit()"
+    >
       Creer
     </button>
   </div>
