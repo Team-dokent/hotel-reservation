@@ -20,6 +20,13 @@
       "email": "project-manager@test.com",
       "password": "123456789",
       "role": "project-manager"
+    },
+    {
+      "id": 3,
+      "name": "Aube Mbali",
+      "email": "aubembali@gmail.com",
+      "password": "123456789",
+      "role": "project-manager"
     }
   ],
   "posts": [
@@ -38,5 +45,40 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+
+  "booking": [
+    {
+      "id": 1,
+      "dateStart" : "24/11/2022",
+      "dateEnd": "24/1/2023",
+      "adult" : 2,
+      "child" : 1,
+      "roms" : 2,
+      "idUser" : 3
+    }
+  ],
+
+  "roleRom":[
+    {
+      "id": 1,
+      "name": "suite"
+    },
+    {
+      "id": 2,
+      "name": "roms"
+    }
+  ],
+
+  "RomsSuite": [
+    {
+      "id": 112,
+      "name": "Chambre d'été I",
+      "price": "175000 fcfa",
+      "description": ""
+      "n"
+    }
+  ]
+
+
 }
