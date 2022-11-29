@@ -1,0 +1,576 @@
+////@at-root swiper
+@import '~swiper/css';
+@import '~swiper/css/navigation';
+@import '~swiper/css/pagination';
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Mate+SC&display=swap');
+
+@import '/src/styles.scss';
+@import '/src/assets/site/scss/mixins';
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  // border-radius: 4px;
+  // padding: 0.75em 0.75em 0 0.75em;
+  height: 3rem;
+  border: 1px solid $primary ;
+}
+
+
+
+//@at-root swiper
+.swiper-button-next,.swiper-button-prev{
+  background-color: rgba(0, 0, 0, 0.25);
+  color:  lighten($color: $primary, $amount: 10);
+  @include widthHeightPx(60px, 60px);
+  border-radius: 100%;
+}
+.swiper-pagination-bullet-active{
+  background-color: $primary;
+}
+.swiper-pagination-bullet{
+  @include widthHeightPx(10px, 10px);
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  display: block;
+  @include widthHeightPx(100%, 35vh);
+}
+
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.list_style {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.mt-25 {
+  margin-top: 40px;
+}
+
+
+section {
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+button:focus {
+  outline: none;
+}
+
+.section_gap {
+  padding: 120px 0;
+}
+
+.d_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mb_30 {
+  margin-bottom: -30px;
+}
+
+.section_title {
+  margin-bottom: 75px;
+}
+
+.section_title h2 {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 600;
+}
+
+.section_title p {
+  font-size: 14px;
+  line-height: 30px;
+  color: #777777;
+  margin-bottom: 0px;
+}
+
+.title_color {
+  color: #222222;
+}
+
+.title_w {
+  color: #fff;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 45px;
+  font-weight: 600;
+}
+
+
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*============= Start banner_area css =============*/
+
+/*============= End banner_area css =============*/
+.hotel_booking_table {
+  background:rgba(0, 0, 0, 0.5);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner_area {
+  background: #04091e;
+  position: relative;
+  z-index: 1;
+}
+
+.banner_area .bg-parallax {
+  background: url("https://preview.colorlib.com/theme/royal/image/banner_bg.jpg.webp") no-repeat scroll center 0/cover;
+  background-attachment: fixed;
+  opacity: 0.50;
+}
+
+.banner_area .position {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.booking_table {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 800px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 125%;
+  bottom: 0;
+  z-index: -1;
+}
+
+.banner_content {
+  color: #fff;
+  // margin-bottom: 94px;
+}
+
+.banner_content h6 {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 400;
+}
+
+.banner_content .h2 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.banner_content p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 10px 0px 20px;
+}
+
+/*===========End difference  of Price===========*/
+
+#differencePrice  img{
+  transition: all 0.3s ;
+  object-fit: cover;
+  display: block;
+  @include widthHeightPx(100%, 20vh);
+   
+}
+
+#differencePrice  img:hover{
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transform: scale(1.15);
+}
+/*====================================================*/
+
+
+/* ======= Rooms1 style ======= */
+.rooms1 .item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.rooms1 .item:hover img {
+  -webkit-filter: none;
+  filter: none;
+  -webkit-transform: scale(1.09, 1.09);
+  transform: scale(1.09, 1.09);
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.rooms1 .item:hover .con {
+  bottom: 0;
+}
+.rooms1 .item img {
+  height: 250px;
+  width: 100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.rooms1 .item .category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  writing-mode: vertical-rl;
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  text-orientation: mixed;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  font-family: 'Barlow Condensed', sans-serif;
+  padding: 10px 3px;
+  line-height: 1.5em;
+}
+.rooms1 .item .category a {
+  color: #fff;
+}
+.rooms1 .item .category:hover {
+  color: #fff;
+}
+.rooms1 .item .con {
+  padding: 20px;
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  text-align: left;
+  z-index: 20;
+  height: auto;
+  box-sizing: border-box;
+  background: -moz-linear-gradient(top, transparent 0, rgba(0, 0, 0, .1) 2%, rgba(0, 0, 0, .75) 90%);
+  background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
+  background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, .75) 90%);
+}
+.rooms1 .item .con h6,
+.rooms1 .item .con h6 a {
+  position: relative;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Barlow Condensed', sans-serif;
+  display: inline;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.rooms1 .item .con h6 i {
+  font-size: 6px;
+  margin-right: 2px;
+}
+.rooms1 .item .con h5,
+.rooms1 .item .con h5 a {
+  position: relative;
+  color: #fff;
+  font-size: 27px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.rooms1 .item .con p {
+  color: #fff;
+  font-size: 20px;
+}
+.rooms1 .item .con i {
+  color: #fff;
+  font-size: 18px;
+}
+.rooms1 .item .con i:hover {
+  color: #fff;
+}
+.rooms1 .item .con .butn-light {
+  margin-left: 0;
+  border-radius: 30px;
+  border-color: #666;
+  padding: 11px 30px;
+}
+.rooms1 .item .con .butn-light:hover {
+  border-color: #aa8453;
+}
+/* line animation */
+.rooms1 .item .line {
+  text-align: center;
+  height: 1px;
+  width: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  margin: auto 0 30px;
+}
+.rooms1 .item:hover .line {
+  width: 100%;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+/* facilities */
+.rooms1 .facilities ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.rooms1 .facilities ul li {
+color: #fff;
+font-size: 10px;
+text-transform: uppercase;
+  letter-spacing: 3px;
+line-height: 1.2em;
+padding-bottom: 20px;
+  float: left;
+}
+.rooms1 .facilities ul li i {
+margin-right: 10px;
+}
+/* permalink */
+.rooms1 .item .con .permalink {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  height: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  display: inline;
+}
+.rooms1 .item .con .permalink a {
+  color: #fff;
+  text-align: right;
+}
+.rooms1 .item .con .permalink i {
+ font-size: 10px;
+  text-align: right;
+}
+.rooms1 .item .con .permalink a:hover,
+.rooms1 .item .con .permalink i:hover {
+color: #aa8453;
+}
+
+
+
+
+
+
+
+/*=============End Blog Banner css =============*/
+
+/*---------------------------------------------------- */
+.accomodation_item {
+  margin-bottom: 30px;
+}
+
+.accomodation_item .hotel_img {
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.accomodation_item .hotel_img img {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.accomodation_item .hotel_img .theme_btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  padding: 5px 25px;
+  max-width: 128px;
+}
+
+.accomodation_item .hotel_img:hover img {
+  -webkit-transform: scale(1.19);
+  -ms-transform: scale(1.19);
+  transform: scale(1.19);
+}
+
+.accomodation_item h5 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #52c5fd;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.accomodation_item h5 small {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+
+.accomodation_two {
+  margin-bottom: -40px;
+}
+
+.accomodation_two .accomodation_item {
+  margin-bottom: 45px;
+}
+
+/*=========== Start facilities_area css =============*/
+.facilities_area {
+  position: relative;
+  z-index: 1;
+  background: #04091e;
+  overflow: hidden;
+}
+
+.facilities_area .bg-parallax {
+  background: url("https://preview.colorlib.com/theme/royal/image/facilites_bg.jpg.webp") no-repeat scroll center 0/cover;
+  background-attachment: fixed;
+  opacity: 0.15;
+}
+
+.facilities_item {
+  border: 1px solid #777777;
+  border-radius: 10px;
+  background-color: rgba(249, 249, 255, 0.102);
+  padding: 31px 40px 37px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.facilities_item .sec_h4 {
+  padding-bottom: 18px;
+  color: #fff;
+}
+
+.facilities_item .sec_h4 i {
+  color: $primary;
+  font-size: 24px;
+  line-height: 38px;
+  display: inline-block;
+  vertical-align: bottom;
+  padding-right: 20px;
+}
+
+.facilities_item p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+/*=========== End facilities_area css =============*/
+
+/*=========== End about_history_area css =============*/
+.gallery_item {
+  margin-bottom: 30px;
+}
+
+.gallery_item img {
+  max-width: 100%;
+}
+
+.gallery_item .gallery_img {
+  position: relative;
+}
+
+.gallery_item .gallery_img .hover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  height: 100%;
+  color: #fff;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+  opacity: 0;
+}
+
+.gallery_item .gallery_img .hover i {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.gallery_item .gallery_img:hover .hover {
+  opacity: 1;
+}
+
+/*---------------------------------------------------- */
+
+
+/*=========== Contact ================================*/
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}

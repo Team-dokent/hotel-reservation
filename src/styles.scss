@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+/*=================== fonts ====================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+$primary : #f3c300 ;
+$secondary : #1d1d1c;
+$red: #F44336;
+$white : #fff;
+$legth : #EEEEEE;
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+ }
+
+.bg-yellow{
+    background-color: $primary !important;
+}
+
+.bg-dark{
+    background-color: $secondary !important;
+}
+.text-yellow {
+    color: $primary !important;
+}
+section .h1 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+
+.bg-secondary {
+    background-color: $legth !important;
+  
+}
+
+
+.bg-red{
+    background-color: $red;
+  }
+  
