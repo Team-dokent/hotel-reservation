@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -6,13 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
-import {
-  MatSnackBar,
-  MatSnackBarHorizontalPosition,
-  MatSnackBarRef,
-  MatSnackBarVerticalPosition,
-} from '@angular/material/snack-bar';
-import { SnackBarComponent } from 'src/app/shared/components/snack-bar/snack-bar/snack-bar.component';
 
 @Component({
   selector: 'app-login',
@@ -21,16 +14,8 @@ import { SnackBarComponent } from 'src/app/shared/components/snack-bar/snack-bar
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  durationInSeconds = 2;
-  message: string = 'Connection avec success';
-  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private _snackBar: MatSnackBar
-  ) {}
+  constructor(private fb: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.initFormGroup();
@@ -38,23 +23,14 @@ export class LoginComponent implements OnInit {
 
   private initFormGroup(): void {
     this.loginForm = this.fb.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: ['hotel-reservations-manager@test.com', Validators.required],
+      password: ['123456789', Validators.required],
     });
   }
 
   onSubmit(): void {
     this.authService.login(this.loginForm.value);
-    this.openSnackBar(this.message);
     this.loginForm.reset();
-  }
-
-  openSnackBar(message: string) {
-    this._snackBar.open(message, 'x', {
-      horizontalPosition: this.horizontalPosition,
-      verticalPosition: this.verticalPosition,
-      duration: this.durationInSeconds * 1000,
-    });
   }
 
   getFormControlErrorText(abstractControl: AbstractControl): string {
