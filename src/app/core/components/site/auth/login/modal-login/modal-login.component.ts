@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { ModalRegisterComponent } from '../../register/modal-register/modal-register.component';
+
 @Component({
   selector: 'app-modal-login',
   templateUrl: './modal-login.component.html',
@@ -33,7 +33,7 @@ export class ModalLoginComponent implements OnInit {
 
     // this.dialogRef.close();
 
-    this.dialog.open(ModalRegisterComponent);
+    // this.dialog.open(ModalRegisterComponent);
 
   }
 
