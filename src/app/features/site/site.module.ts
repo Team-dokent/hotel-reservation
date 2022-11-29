@@ -11,6 +11,8 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ModalLoginComponent } from 'src/app/core/components/site/auth/login/modal-login/modal-login.component';
 import { ModalRegisterComponent } from 'src/app/core/components/site/auth/register/modal-register/modal-register.component';
 import { ModalResetComponent } from 'src/app/core/components/site/auth/reset/modal-reset/modal-reset.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactSharedComponent } from 'src/app/shared/site/components/contact-shared/contact-shared.component';
 
 
 
@@ -20,10 +22,11 @@ import { ModalResetComponent } from 'src/app/core/components/site/auth/reset/mod
    HeaderComponent,
    FooterComponent,
    RestaurantComponent,
-
+   ContactSharedComponent,
    ModalLoginComponent,
    ModalRegisterComponent,
-   ModalResetComponent
+   ModalResetComponent,
+   ContactComponent
 
   ],
   imports: [

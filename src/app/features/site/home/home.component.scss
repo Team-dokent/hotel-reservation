@@ -130,6 +130,19 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============= Start banner_area css =============*/
+
+/*============= End banner_area css =============*/
+.hotel_booking_table {
+  background:rgba(0, 0, 0, 0.5);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .banner_area {
   background: #04091e;
   position: relative;
