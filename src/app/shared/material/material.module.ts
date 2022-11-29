@@ -10,6 +10,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const materialModules = [
@@ -25,6 +27,8 @@ const materialModules = [
   MatCardModule,
   MatInputModule,
   MatMenuModule,
+  MatCheckboxModule,
+  MatDialogModule,
   MatSnackBarModule,
 ];
 
