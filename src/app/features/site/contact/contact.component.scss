@@ -1,0 +1,55 @@
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 125%;
+    bottom: 0;
+    z-index: -1;
+  }
+  /*=========== breadcrumb_area css =============*/
+  .breadcrumb_area {
+    position: relative;
+    padding: 172px 0px 84px;
+    background: #04091e;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .breadcrumb_area .bg-parallax {
+    background: url("https://img.freepik.com/photos-gratuite/connecter-concept-communication-appel-entrant_53876-125112.jpg?w=1380&t=st=1669654495~exp=1669655095~hmac=e8db2aca2466fe4ea0262a6681a970709fb680cdf051181781673a08c329a4ea") no-repeat scroll center 0/cover;
+    opacity: 0.50;
+    z-index: -1;
+  }
+  
+  .page-cover-tittle {
+    display: block;
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+  }
+  
+  .breadcrumb {
+    text-align: center;
+    background: transparent;
+    padding: 0px;
+    display: inline-block;
+  }
+  
+  .breadcrumb li {
+    display: inline-block;
+    color: #fff;
+  }
+  
+  .breadcrumb li a {
+    color: #fff;
+  }
+  
+  .breadcrumb li + li:before {
+    content: "\e87a";
+    font-family: 'Linearicons-Free';
+    font-size: 14px;
+    font-weight: 600;
+    vertical-align: middle;
+    margin: 0px 10px 0px 7px;
+  }
