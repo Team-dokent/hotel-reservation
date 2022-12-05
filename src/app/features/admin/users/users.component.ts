@@ -1,27 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { MatDialog } from '@angular/material/dialog';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
+import { User } from 'src/app/core/models/user';
+import { UsersService } from 'src/app/core/services/users/users.service';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-users',
@@ -31,28 +20,80 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class UsersComponent implements OnInit {
   animal!: string;
   name!: string;
+  displayedColumns: string[] = [
+    'firstName',
+    'lastName',
+    'email',
+    'phone',
+    'role',
+    'actions',
+  ];
+  dataSource!: MatTableDataSource<User>;
+  durationInSeconds = 2;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  constructor(public dialog: MatDialog) {}
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
-  ngOnInit(): void {}
+  constructor(
+    public dialog: MatDialog,
+    private usersService: UsersService,
+    private _snackBar: MatSnackBar
+  ) {}
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  ngOnInit(): void {
+    this.getUsers();
+  }
+
+  getUsers() {
+    this.usersService.getUsers().subscribe((users) => {
+      const userData = users;
+      this.dataSource = new MatTableDataSource(userData);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
-  openDialog(): void {
+  openDialog(data?: User): void {
     const dialogRef = this.dialog.open(UserFormComponent, {
       width: '500px',
-      data: { name: this.name, animal: this.animal },
+      data,
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed');
+      this.getUsers();
       this.animal = result;
+    });
+  }
+
+  deleteUser(id: string | number) {
+    this.usersService.deleteUser(id).subscribe((response) => {
+      this.openSnackBar('Utilisateur supprimer avec succes');
+      this.getUsers();
+    });
+  }
+
+  updateUser(user: User) {
+    console.log(user);
+    this.openDialog(user);
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, 'x', {
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      duration: this.durationInSeconds * 1000,
     });
   }
 }

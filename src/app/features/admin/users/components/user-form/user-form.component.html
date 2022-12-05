@@ -1,18 +1,3 @@
-<!-- <h1 mat-dialog-title>Hi {{ data.name }}</h1> -->
-<!-- <div mat-dialog-content> -->
-<!-- <p>What's your favorite animal?</p> -->
-<!-- <mat-form-field appearance="fill"> -->
-<!-- <mat-label>Favorite Animal</mat-label> -->
-<!-- <input matInput [(ngModel)]="data.animal" /> -->
-<!-- </mat-form-field> -->
-<!-- </div> -->
-<!-- <div mat-dialog-actions> -->
-<!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
-<!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial> -->
-<!-- Ok -->
-<!-- </button> -->
-<!-- </div> -->
-
 <h1 mat-dialog-title>Ajouter un utilisateur</h1>
 <form class="example-form" [formGroup]="form">
   <table class="example-full-width" cellspacing="0">
@@ -54,15 +39,6 @@
         matInput
         placeholder="Ex. pat@example.com"
       />
-      <!-- <div *ngIf="f['email'].errors" class="invalid-feedback"> -->
-      <!-- <div *ngIf="f['email'].errors['required']">Email is required</div> -->
-      <!-- <div *ngIf="f['email'].errors['email']"> -->
-      <!-- Email must be a valid email address -->
-      <!-- </div> -->
-      <!-- </div> -->
-      <!--<mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>-->
     </mat-form-field>
     <br />
     <mat-form-field class="example-full-width">
@@ -97,20 +73,7 @@
       [disabled]="form.invalid"
       (click)="onSubmit()"
     >
-      Creer
+      {{ editMode ? "Modifier" : "Creer" }}
     </button>
   </div>
-
-  <!-- <p> -->
-  <!-- <mat-form-field class="example-full-width"> -->
-  <!-- <mat-label>Email</mat-label> -->
-  <!-- <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com"> -->
-  <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')"> -->
-  <!-- Please enter a valid email address -->
-  <!-- </mat-error> -->
-  <!-- <mat-error *ngIf="emailFormControl.hasError('required')"> -->
-  <!-- Email is <strong>required</strong> -->
-  <!-- </mat-error> -->
-  <!-- </mat-form-field> -->
-  <!-- </p> -->
 </form>

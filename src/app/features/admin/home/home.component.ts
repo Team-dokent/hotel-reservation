@@ -2,6 +2,9 @@ import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Observable } from 'rxjs';
+import { User } from 'src/app/core/models/user';
+import { UsersService } from 'src/app/core/services/users/users.service';
 
 export interface UserData {
   id: string;
@@ -49,26 +52,42 @@ const NAMES: string[] = [
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
-  dataSource: MatTableDataSource<UserData>;
+  displayedColumns: string[] = [
+    'id',
+    'lastName',
+    'firstName',
+    'email',
+    'phone',
+    'role',
+  ];
+  // dataSource!: MatTableDataSource<UserData>;
+  dataSource!: MatTableDataSource<User>;
+  user$!: Observable<User[]>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() {
+  constructor(private usersService: UsersService) {}
+
+  ngOnInit(): void {
     // Create 100 users
-    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+    // const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+
+    this.usersService.getUsers().subscribe((users) => {
+      const usersArray = users;
+      this.dataSource = new MatTableDataSource(usersArray);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
 
     // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+    // this.dataSource = new MatTableDataSource(users);
   }
 
-  ngOnInit(): void {}
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
+  // ngAfterViewInit() {
+  //   this.dataSource.paginator = this.paginator;
+  //   this.dataSource.sort = this.sort;
+  // }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

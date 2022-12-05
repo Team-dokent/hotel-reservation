@@ -10,41 +10,74 @@
   </div>
 
   <div class="row">
-    <div class="">
+    <div>
       <mat-form-field>
         <mat-label>Filter</mat-label>
         <input
           matInput
           (keyup)="applyFilter($event)"
-          placeholder="Ex. ium"
+          placeholder="Ex. Mia"
           #input
         />
       </mat-form-field>
     </div>
 
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!-- Position Column -->
-      <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef>No.</th>
-        <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    <table class="mat-elevation-z8" mat-table [dataSource]="dataSource" matSort>
+      <!-- ID Column -->
+      <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+      </ng-container> -->
+
+      <!-- lastName Column -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nom</th>
+        <td mat-cell *matCellDef="let row">{{ row.lastName }}</td>
       </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      <!-- Progress Column -->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Prenom</th>
+        <td mat-cell *matCellDef="let row">{{ row.firstName }}</td>
       </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef>Weight</th>
-        <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+        <td mat-cell *matCellDef="let row">{{ row.email }}</td>
       </ng-container>
 
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef>Symbol</th>
-        <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+      <!-- Phone Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Phone</th>
+        <td mat-cell *matCellDef="let row">{{ row.phone }}</td>
+      </ng-container>
+
+      <!-- Role Column -->
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Role</th>
+        <td mat-cell *matCellDef="let row">{{ row.role }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th
+          class="text-center"
+          mat-header-cell
+          *matHeaderCellDef
+          mat-sort-header
+        >
+          Actions
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <div class="d-flex">
+            <button (click)="updateUser(row)" mat-button color="accent">
+              Edit
+            </button>
+            <button (click)="deleteUser(row.id)" mat-button color="warn">
+              Delete
+            </button>
+          </div>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -57,5 +90,11 @@
         </td>
       </tr>
     </table>
+
+    <mat-paginator
+      class="mat-elevation-z8"
+      [pageSizeOptions]="[10, 25, 50, 100]"
+      aria-label="Select page of users"
+    ></mat-paginator>
   </div>
 </div>
