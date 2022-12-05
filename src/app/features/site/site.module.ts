@@ -12,8 +12,11 @@ import { ModalLoginComponent } from 'src/app/core/components/site/auth/login/mod
 import { ModalResetComponent } from 'src/app/core/components/site/auth/reset/modal-reset/modal-reset.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactSharedComponent } from 'src/app/shared/site/components/contact-shared/contact-shared.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
-
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,19 +24,29 @@ import { ContactSharedComponent } from 'src/app/shared/site/components/contact-s
    HeaderComponent,
    FooterComponent,
    RestaurantComponent,
-   ContactSharedComponent,
    ModalLoginComponent,
    ModalResetComponent,
-   ContactComponent
+   ContactComponent,
+   ContactSharedComponent,
+
    
   ],
   imports: [
     CommonModule,
     SiteRoutingModule,
     MaterialModule,
-    SwiperModule
+    SwiperModule,
+
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+    SweetAlert2Module,
 
    
-  ]
+  ],
+  providers: [
+  
+  ],
 })
 export class SiteModule { }
