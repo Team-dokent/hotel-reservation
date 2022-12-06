@@ -1,33 +1,30 @@
 {
   "users": [
     {
-      "id": 1,
-      "firstName": "Amadou Benthe",
+      "firstName": "Amadou",
       "lastName": "DIALLO",
-      "phone": "0598562312",
-      "password": "123456789",
-      "isActive": true,
-      "role": "hotel-manager"
-    },
-    {
-      "id": 1,
-      "firstName": "John test",
-      "lastName": "Doe",
       "email": "hotel-reservations-manager@test.com",
       "phone": "0598562312",
-      "password": "123456789",
-      "isActive": true,
-      "role": "hotel-reservations-manager"
+      "role": "hotel-manager",
+      "id": "46b98328-6928-4e9f-966e-f9c484e55c91"
     },
     {
-      "id": 1,
-      "firstName": "Michelle",
-      "lastName": "MAKISSI",
-      "email": "project-manager@test.com",
-      "phone": "0598562312",
-      "password": "123456789",
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "f5ac2896-e096-4cea-899e-e94951b01e7f",
       "isActive": true,
-      "role": "project-manager"
+      "password": "password"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLOxx",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "faa3724c-3b69-4f54-840e-0be5e032a246"
     }
   ],
   "posts": [
