@@ -12,12 +12,7 @@ import {
   UsersService,
 } from 'src/app/core/services/users/users.service';
 
-// export interface DialogData {
-//   animal: string;
-//   name: string;
-// }
-
-export interface Food {
+export interface Profil {
   value: string;
   viewValue: string;
 }
@@ -29,7 +24,7 @@ export interface Food {
 })
 export class UserFormComponent {
   editMode = false;
-  foods: Food[] = [
+  profils: Profil[] = [
     { value: 'hotel-manager', viewValue: 'Directrice de l’hôtel' },
     {
       value: 'hotel-reservations-manager',
@@ -77,6 +72,13 @@ export class UserFormComponent {
       });
     } else {
       console.log('Update user');
+      const userDataForm: UserForm = {
+        ...this.form.value,
+      };
+      this.usersService.update(this.data.id, userDataForm).subscribe((user) => {
+        this.openSnackBar('Utilisateur Modifier avec succes');
+        this.onNoClick();
+      });
     }
 
     this.form.reset();

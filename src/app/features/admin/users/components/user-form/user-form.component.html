@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Ajouter un utilisateur</h1>
+<h1 mat-dialog-title>{{ editMode ? "Modifier" : "Ajouter" }} un utilisateur</h1>
 <form class="example-form" [formGroup]="form">
   <table class="example-full-width" cellspacing="0">
     <tr>
@@ -43,7 +43,6 @@
     <br />
     <mat-form-field class="example-full-width">
       <mat-label>Telephone</mat-label>
-      <!-- <span matPrefix> &nbsp;</span> -->
       <input
         type="tel"
         name="phone"
@@ -51,15 +50,14 @@
         matInput
         placeholder="2250584108716"
       />
-      <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
     </mat-form-field>
     <br />
 
     <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Favorite food</mat-label>
+      <mat-label>Profil</mat-label>
       <mat-select formControlName="role">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{ food.viewValue }}
+        <mat-option *ngFor="let profil of profils" [value]="profil.value">
+          {{ profil.viewValue }}
         </mat-option>
       </mat-select>
     </mat-form-field>

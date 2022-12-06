@@ -35,27 +35,11 @@ export class UsersService {
     return this.http.post<User>(`${this.baseUrl}/users`, user);
   }
 
-  updateUser(courseId: string | number, changes: Partial<User>) {
-    return this.http.put('/api/course/' + courseId, changes);
-  }
-
-  update(id: number, user: User): Observable<any> {
-    // return this.http.put(
-    //   this.apiURL + '/posts/' + id,
-    //   JSON.stringify(user),
-    //   this.httpOptions
-    // );
-
-    return this.http.put(`${this.baseUrl}/users/${id}`, JSON.stringify(user));
-
-    // .pipe(
-    //   catchError(this.errorHandler)
-    // )
+  update(id: number | string, changes: Partial<User>): Observable<any> {
+    return this.http.put(`${this.baseUrl}/users/${id}`, changes);
   }
 
   deleteUser(id: string | number) {
     return this.http.delete(`${this.baseUrl}/users/${id}`);
   }
-
-  // deleteUser(id: string): Observable<boolean>
 }

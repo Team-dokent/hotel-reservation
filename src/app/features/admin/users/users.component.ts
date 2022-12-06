@@ -11,6 +11,7 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
+import { DeleteDialogComponent } from 'src/app/features/admin/users/components/delete-dialog/delete-dialog.component';
 
 @Component({
   selector: 'app-users',
@@ -20,14 +21,7 @@ import {
 export class UsersComponent implements OnInit {
   animal!: string;
   name!: string;
-  displayedColumns: string[] = [
-    'firstName',
-    'lastName',
-    'email',
-    'phone',
-    'role',
-    'actions',
-  ];
+  displayedColumns: string[] = ['name', 'email', 'role', 'phone', 'actions'];
   dataSource!: MatTableDataSource<User>;
   durationInSeconds = 2;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
@@ -71,21 +65,23 @@ export class UsersComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
       this.getUsers();
       this.animal = result;
     });
   }
 
-  deleteUser(id: string | number) {
-    this.usersService.deleteUser(id).subscribe((response) => {
-      this.openSnackBar('Utilisateur supprimer avec succes');
+  openDialogDelete(user: User): void {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+      data: user,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      this.animal = result;
       this.getUsers();
     });
   }
 
   updateUser(user: User) {
-    console.log(user);
     this.openDialog(user);
   }
 
