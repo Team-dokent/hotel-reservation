@@ -17,6 +17,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { environment } from 'src/environments/environment';
+import { ListRoomsComponent } from 'src/app/shared/site/components/rooms/list-rooms/list-rooms.component';
+import { DetailRomsComponent } from 'src/app/shared/site/components/rooms/detail-roms/detail-roms.component';
+import { BookingSharedComponent } from 'src/app/shared/site/components/booking-shared/booking-shared.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +32,9 @@ import { environment } from 'src/environments/environment';
    ModalResetComponent,
    ContactComponent,
    ContactSharedComponent,
+   ListRoomsComponent,
+   DetailRomsComponent,
+   BookingSharedComponent
 
    
   ],

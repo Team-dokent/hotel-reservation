@@ -48,7 +48,6 @@ export class ContactSharedComponent implements OnInit {
   }
 
 
-
   //submited
   handleOnSubmit(): void {
     this.submitted = true;

@@ -22,4 +22,18 @@ export class RoomsService {
 
   }
 
+  getRoomById(roomId: number): Observable<RoomsModal>{
+
+    // var API_URL = `${this.apiUrlDB}/${id}`;
+    // return this.http.delete(API_URL).pipe(catchError(this.handleError));
+
+
+    const room = this.http.get<RoomsModal>(this.apiUrl + '/rooms/' + roomId );
+    if (!room) {
+        throw new Error('Oups ! cette chambre n\'existe pas !');
+    } else {
+        return room;
+    }
+  }
+
 }

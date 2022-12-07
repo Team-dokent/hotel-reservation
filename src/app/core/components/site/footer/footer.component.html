@@ -1,8 +1,37 @@
+<section style=" background-color: rgba(0, 0, 0, 0.777);">
+    <div class="container  py-5">    
+        <div class="row ">
+            <!-- <div class="col-lg-10 col-12 "> -->
+                <div class="subscribe text-white  " id="contact">
+                        <h2 class="text-center">Abonnez-vous à la newsletter</h2>
+                        <p class="text-center"> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <div class="input ">
+                            <div class="row ">
+                                <div class="col-lg-6 col-md-6 col-12  ">
+                                    <input type="email" class="w-50 offset-lg-7 offset-3" placeholder="Votre adresse mail ">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12 ">
+                                    <button class="text-white border border-warning w-25 offset-lg-1 offset-3 " style="background-color: #c78e08f5;">
+                                        <span  >S'abonner</span>
+                                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                            <path fill="currentColor" d="M20.03 12C20.03 7.59 16.41 3.97 12 3.97C7.59 3.97 3.97 7.59 3.97 12C3.97 16.41 7.59 20.03 12 20.03C16.41 20.03 20.03 16.41 20.03 12M22 12C22 17.54 17.54 22 12 22C6.46 22 2 17.54 2 12C2 6.46 6.46 2 12 2C17.54 2 22 6.46 22 12M13.54 13V16L17.5 12L13.54 8V11H6.5V13" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+</section>
+
 <footer class="" id="footer">
-    <div class="text-white py-5" style="background-color:#222222 ;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+    <div class="text-white" style="background-color:#222222 ;">
+
+        <div class="container py-4  ">
+            <div class="row ">
+                <div class="col-lg-4 col-md-4 col-12 ">
                     <div >
                         <h3>Hôte <span class="text-yellow">Paradis</span></h3>
                         <p >
@@ -15,8 +44,8 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-md-3 offset-md-1 ">
-                    <div >
+                <div class="col-lg-4 col-md-4  col-12 ">
+                    <div>
                         <h3 >Explore</h3>
                         <ul >
                             <li><a href="#" class="text-decoration-none text-yellow">Home</a></li>
@@ -28,7 +57,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-4 col-12 ">
                     <div>
                         <h3 >Contact</h3>
                         <p> 321 Ouattara  Abidjan Plateaux</p>
@@ -80,3 +109,9 @@
         </div>
     </div>
 </footer>
+
+<button class="scroll-to-top"  *ngIf="isShow" (click)="gotoTop()">
+    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19,3H5A2,2 0 0,0 3,5V19C3,20.11 3.9,21 5,21H19C20.11,21 21,20.11 21,19V5A2,2 0 0,0 19,3M16.59,15.71L12,11.12L7.41,15.71L6,14.29L12,8.29L18,14.29L16.59,15.71Z" />
+    </svg>
+</button>
