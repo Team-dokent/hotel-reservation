@@ -369,140 +369,22 @@
 </section>
 
 <section
-  class="accomodation_area section_gap"
-  id="romeSuite"
-  style="
-    background-image: url(https://zcube.in/riorelax/img/bg/testimonial-bg.png);
-    background-size: cover;
-    background-attachment: fixed;
-  "
->
+    class="accomodation_area section_gap"
+    id="romeSuite"
+    style="
+      background-image: url(https://zcube.in/riorelax/img/bg/testimonial-bg.png);
+      background-size: cover;
+      background-attachment: fixed;
+    ">
+    
   <div class="container">
     <h2 class="text-dark text-center h1">Chambres & Suites</h2>
-    <div class="row mb_30">
-      <div class="col-lg-3 col-md-6 col-12">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Chambre d'été I</h4>
-          </a>
-          <h5>175000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t3.ftcdn.net/jpg/02/71/08/28/240_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Chambre d'été II</h4>
-          </a>
-          <h5>175000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12 d-none d-md-block d-lg-block">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t4.ftcdn.net/jpg/01/66/35/45/240_F_166354596_LIr9E3OP6zOJYUWx0z9KAOSp8VKiQsvb.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Chambre d'été III</h4>
-          </a>
-          <h5>180000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12 d-none d-md-block d-lg-block">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t4.ftcdn.net/jpg/03/14/18/93/240_F_314189357_XfwtOLZy1dEJr1J5V3bV8BlqfgDBvbbI.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4 p-0">Chambre d'été VI</h4>
-          </a>
-          <h5 class="mb-5"> 175000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
+    <div class="row mb_30" >
+      <app-list-rooms   [listRooms]="rooms" [typeRom]="typeRoom2"></app-list-rooms>
     </div>
 
-    <div class="row mb_30">
-      <div class="col-lg-3 col-md-6 col-12">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t4.ftcdn.net/jpg/00/48/05/67/240_F_48056772_4xzGQerR7lW82z7MPTN8AulMraNIOZEJ.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Suite Prince I</h4>
-          </a>
-          <h5>155000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t3.ftcdn.net/jpg/02/76/81/90/240_F_276819012_95VCLYNKseyiT8k4FE0ytPkvy40PfgTf.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Suite Royale</h4>
-          </a>
-          <h5>175000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12 d-none d-md-block d-lg-block">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t4.ftcdn.net/jpg/00/14/15/07/240_F_14150707_69W44NWjFECm7BXhnPCwX79XNTOSqEGm.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Suite Seigneurie</h4>
-          </a>
-          <h5>185000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12 d-none d-md-block d-lg-block">
-        <div class="accomodation_item text-center">
-          <div class="hotel_img">
-            <img
-              src="https://t4.ftcdn.net/jpg/00/70/55/91/240_F_70559163_o0DOefsCPo7MxNscus7NgiakJ7kMtDQY.jpg"
-              alt=""
-            />
-            <a href="#" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
-          </div>
-          <a href="#">
-            <h4 class="sec_h4">Suite Prince II</h4>
-          </a>
-          <h5>195000 fcfa<small>/nuit</small></h5>
-        </div>
-      </div>
+    <div class="row mb_30 mt-2">
+      <app-list-rooms   [listRooms]="rooms" [typeRom]="typeSuite"></app-list-rooms>
     </div>
   </div>
 </section>

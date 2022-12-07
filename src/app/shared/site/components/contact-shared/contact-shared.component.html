@@ -11,23 +11,49 @@
                     laboriosam veritatis, quos non quis ad perspiciatis, totam corporis
                     ea, alias ut unde.
                 </p>
-                <form class="example-form mt-5">
-                    <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Entrer votre nom</mat-label>
-                        <input matInput placeholder="Nom" />
-                    </mat-form-field>
+                <form [formGroup]="contactForm" (ngSubmit)="handleOnSubmit()" class="example-form mt-5">
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Entrer votre mail</mat-label>
-                        <input matInput placeholder="pat@example.com" required />
+                        <mat-label>Sujet</mat-label>
+                        <input formControlName="sujet" matInput placeholder="Sujet "/>
                     </mat-form-field>
+                    <div *ngIf="myFormControls['sujet'].touched && myFormControls['sujet'].invalid" class="p-0" >
+                        <p class="text-danger" *ngIf="myFormControls['sujet'].errors?.['required']">
+                            Oups ! le sujet est obligatoire :)
+                        </p>
+                        <p class="text-danger" *ngIf="myFormControls['sujet'].errors?.['minLength']">
+                            Oups ! il faut au moins 3 caractèrs pour le sujet :)
+                        </p>
+                    </div>
+
 
                     <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Entrer votre message</mat-label>
-                        <textarea matInput></textarea>
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" matInput placeholder="pat@example.com" />
                     </mat-form-field>
+                    <div *ngIf="myFormControls['email'].touched && myFormControls['email'].invalid" class="text-danger p-0 m-0">
+                        <p *ngIf="myFormControls['email'].errors?.['required']">
+                            Oups ! le mail est obligatoire :)
+                        </p>
+                        <p *ngIf="myFormControls['email'].errors?.['pattern']">
+                            Oups ! l'adresse mail est incorrect :)
+                        </p>
+                    </div>
 
-                    <button mat-raised-button color="warn">Envoyer le message</button>
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Message</mat-label>
+                        <textarea formControlName="message" matInput></textarea>
+                    </mat-form-field>
+                    <div *ngIf="myFormControls['message'].touched && myFormControls['message'].invalid" class="text-danger p-0 m-0">
+                        <p *ngIf="myFormControls['message'].errors?.['required']">
+                            Oups ! le message est obligatoire :)
+                        </p>
+                        <p *ngIf="myFormControls['message'].errors?.['minLength']">
+                            Oups ! il faut au moins 3 caractèrs pour le message :)
+                        </p>
+                    </div>
+
+                    <button mat-raised-button color="warn" type="submit">Envoyer le message</button>
                 </form>
             </div>
 

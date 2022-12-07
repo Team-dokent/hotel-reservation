@@ -12,7 +12,14 @@ import { ModalLoginComponent } from 'src/app/core/components/site/auth/login/mod
 import { ModalResetComponent } from 'src/app/core/components/site/auth/reset/modal-reset/modal-reset.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactSharedComponent } from 'src/app/shared/site/components/contact-shared/contact-shared.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
+import { environment } from 'src/environments/environment';
+import { ListRoomsComponent } from 'src/app/shared/site/components/rooms/list-rooms/list-rooms.component';
+import { DetailRomsComponent } from 'src/app/shared/site/components/rooms/detail-roms/detail-roms.component';
+import { BookingSharedComponent } from 'src/app/shared/site/components/booking-shared/booking-shared.component';
 
 
 @NgModule({
@@ -21,19 +28,32 @@ import { ContactSharedComponent } from 'src/app/shared/site/components/contact-s
    HeaderComponent,
    FooterComponent,
    RestaurantComponent,
-   ContactSharedComponent,
    ModalLoginComponent,
    ModalResetComponent,
-   ContactComponent
+   ContactComponent,
+   ContactSharedComponent,
+   ListRoomsComponent,
+   DetailRomsComponent,
+   BookingSharedComponent
+
    
   ],
   imports: [
     CommonModule,
     SiteRoutingModule,
     MaterialModule,
-    SwiperModule
+    SwiperModule,
+
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+    SweetAlert2Module,
 
    
-  ]
+  ],
+  providers: [
+  
+  ],
 })
 export class SiteModule { }
