@@ -17,9 +17,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { environment } from 'src/environments/environment';
-import { ListRoomsComponent } from 'src/app/shared/site/components/rooms/list-rooms/list-rooms.component';
 import { DetailRomsComponent } from 'src/app/shared/site/components/rooms/detail-roms/detail-roms.component';
 import { BookingSharedComponent } from 'src/app/shared/site/components/booking-shared/booking-shared.component';
+import { RoomsComponent } from './rooms/rooms.component';
+import { Design1ListRoomsComponent } from 'src/app/shared/site/components/rooms/design1-list-rooms/design1-list-rooms.component';
+import { Design2ListRoomsComponent } from 'src/app/shared/site/components/rooms/design2-list-rooms/design2-list-rooms.component';
+import { Design2BookingComponent } from 'src/app/shared/site/components/design2-booking/design2-booking.component';
+import { Rooms4Component } from './rooms4/rooms4.component';
+import { RoomSuiteComponent } from './room-suite/room-suite.component';
 
 
 @NgModule({
@@ -32,9 +37,14 @@ import { BookingSharedComponent } from 'src/app/shared/site/components/booking-s
    ModalResetComponent,
    ContactComponent,
    ContactSharedComponent,
-   ListRoomsComponent,
    DetailRomsComponent,
-   BookingSharedComponent
+   BookingSharedComponent,
+   RoomsComponent,
+   Design1ListRoomsComponent,
+   Design2ListRoomsComponent,
+   Design2BookingComponent,
+   Rooms4Component,
+   RoomSuiteComponent
 
    
   ],

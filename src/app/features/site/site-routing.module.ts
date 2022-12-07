@@ -4,6 +4,7 @@ import { DetailRomsComponent } from 'src/app/shared/site/components/rooms/detail
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { RoomsComponent } from './rooms/rooms.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'restaurant', component: RestaurantComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'room/:id', component: DetailRomsComponent },
+  { path: 'rooms', component: RoomsComponent },
 ];
 
 @NgModule({

@@ -71,13 +71,6 @@
 }
 
 /*=========== breadcrumb_area css =============*/
-.breadcrumb_area {
-  position: relative;
-  padding: 172px 0px 84px;
-  background: #04091e;
-  z-index: 1;
-  overflow: hidden;
-}
 
 .breadcrumb_area .bg-parallax {
   background: url("https://themes.codezion.com/angular/toor/assets/images/hotels/2.jpg");
@@ -85,38 +78,8 @@
   z-index: -1;
 }
 
-.page-cover-tittle {
-  display: block;
-  font-size: 36px;
-  line-height: 45px;
-  color: #fff;
-}
 
-.breadcrumb {
-  text-align: center;
-  background: transparent;
-  padding: 0px;
-  display: inline-block;
-}
-
-.breadcrumb li {
-  display: inline-block;
-  color: #fff;
-}
-
-.breadcrumb li a {
-  color: #fff;
-}
-
-.breadcrumb li+li:before {
-  content: "\e87a";
-  font-family: 'Linearicons-Free';
-  font-size: 14px;
-  font-weight: 600;
-  vertical-align: middle;
-  margin: 0px 10px 0px 7px;
-}
-
+//Espace room
 .room  span{
   color: #fff;
   background-color: #e6a015;
@@ -134,12 +97,7 @@
 }
 
 
-///  detail image
-
-// .detail-image img {
-//   cursor: pointer;
-// }
-
+// detail image
 .detail-image  {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }

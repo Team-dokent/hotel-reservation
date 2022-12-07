@@ -12,7 +12,7 @@
       <div class="banner_content text-center justify-content-center">
         <span class="fs-6 mb-4">L'offre se termine dans 10 jours</span>
         <h1>
-          <span class="h2"> Hôte Paradis</span> <br />
+          <span class="h2"> Hôtel Paradis</span> <br />
           <span class="d-none d-md-block d-lg-block"
             >vous sauhaite la bienvenue.</span
           >
@@ -118,13 +118,13 @@
         </div>
         <p>L'HÔTEL PARADIS</p>
         <h2 class="text-dark h1">Expérience de luxe</h2>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="4000">
           Bienvenue dans le meilleur hôtel cinq étoiles de luxe d'Abidjan.
           L'élément hôtel seuse le vestibule aucan certains juste dans le sapien
           rutrum volutpat. Jusqu'à ce qu'il veuille les enfants. Jusqu'à ce
           qu'il veuille mettre l'arc sur le blane.
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="3000">
           L'hôtel est un lieu de nidification et non un élément détestable. Les
           orcs, nés avec des plumes et de grosses pousses, donneront naissance à
           une souris ridicule née sur la montagne, et ils habiteront dans la
@@ -155,7 +155,7 @@
           }"
           [pagination]="{ clickable: true }"
         >
-          <ng-template swiperSlide>
+          <ng-template swiperSlide >
             <img
               src="https://themeydanhotel.com/sites/default/files/2018-08/ROOM.jpg"
             />
@@ -192,7 +192,7 @@
 </section>
 
 <section class="mt-25 bg-secondary py-5" id="differencePrice">
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
     <h2 class="text-dark text-center h1">Nos differents prix</h2>
     <div class="row">
       <swiper
@@ -288,8 +288,9 @@
     data-stellar-ratio="0.8"
     data-stellar-vertical-offset="0"
     data-background=""
+    
   ></div>
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
     <div class="section_title text-center">
       <h2 class="title_w h1">Nos differents services</h2>
     </div>
@@ -317,7 +318,7 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Chambre</a></h5>
+            <h5><a routerLink="/home/rooms">Chambre</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
@@ -345,7 +346,7 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Bar</a></h5>
+            <h5><a >Bar</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
@@ -359,7 +360,7 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Restaurant </a></h5>
+            <h5><a routerLink="/home/restaurant">Restaurant </a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
@@ -377,14 +378,14 @@
       background-attachment: fixed;
     ">
     
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
     <h2 class="text-dark text-center h1">Chambres & Suites</h2>
     <div class="row mb_30" >
-      <app-list-rooms   [listRooms]="rooms" [typeRom]="typeRoom2"></app-list-rooms>
+      <app-design1-list-rooms  [listRooms]="rooms" [typeRom]="typeRoom2"></app-design1-list-rooms>
     </div>
 
     <div class="row mb_30 mt-2">
-      <app-list-rooms   [listRooms]="rooms" [typeRom]="typeSuite"></app-list-rooms>
+      <app-design1-list-rooms  [listRooms]="rooms" [typeRom]="typeSuite"></app-design1-list-rooms>
     </div>
   </div>
 </section>
