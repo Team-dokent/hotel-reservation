@@ -1,11 +1,17 @@
-<div class="room-suits-page-2 pt-120 mb-120">
+<section class="bg-secondary">
     <div class="container py-5">
-
-        <app-design2-booking></app-design2-booking>
-
         <div class="row">
+            <app-design2-booking [typeRom]="typeRom"></app-design2-booking>
+        </div>
+    </div>
+</section>
+
+
+<div class="room-suits-page-2 pt-120 mb-120">
+    <div class="container">
+        <div class="row  py-5">
             <div class="col-lg-3 col-md-6 col-10" *ngFor="let r of listRooms  ">
-                <div class="room-suits-wrrap"  *ngIf="r.typeRoom == typeRom" data-aos="fade-up" data-aos-duration="3000">
+                <div class="room-suits-wrrap"  *ngIf="r.typeRoom == typeRom" >
                     <div class="room-suits-img ">
                         <img src="{{r.image}}" alt="{{r.title}}" width="auto" height="250"
                             style="background-size:cover;object-fit: cover;">
@@ -40,9 +46,12 @@
                             <span class="text-yellow"> {{r.pricePerNight}} fcfa</span> /nuit
                         </div>
                         <h3>
-                            <a class="text-decoration-none" [routerLink]="['/home/room', r.id]">
+                            <a class="text-decoration-none" href="/room/{{r.id}}" title="{{r.title}}">
                                 {{r.title}}
                             </a>
+                            <!-- <a class="text-decoration-none" href="/room/{{r.id}}" [routerLink]="['/room', r.id]">
+                                {{r.title}}
+                            </a> -->
                         </h3>
                         <div class="py-0 d-flex align-items-center justify-content-center">
                             <div class="d-flex ">

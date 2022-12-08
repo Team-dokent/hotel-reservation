@@ -189,5 +189,25 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "reservations": [
+    {
+      "start": "2022-12-08T00:00:00.000Z",
+      "end": "2022-12-17T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 1,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "id": 1
+    },
+    {
+      "start": "2022-12-08T00:00:00.000Z",
+      "end": "2022-12-23T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 2,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "id": 2
+    }
+  ]
 }

@@ -25,6 +25,9 @@ import { Design2ListRoomsComponent } from 'src/app/shared/site/components/rooms/
 import { Design2BookingComponent } from 'src/app/shared/site/components/design2-booking/design2-booking.component';
 import { Rooms4Component } from './rooms4/rooms4.component';
 import { RoomSuiteComponent } from './room-suite/room-suite.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
+import { SiteComponent } from './site.component';
+import { SiteLayoutComponent } from 'src/app/layouts/site-layout/site-layout.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { RoomSuiteComponent } from './room-suite/room-suite.component';
    Design2ListRoomsComponent,
    Design2BookingComponent,
    Rooms4Component,
-   RoomSuiteComponent
+   RoomSuiteComponent,
+   SiteComponent,
+   SiteLayoutComponent
+
 
    
   ],

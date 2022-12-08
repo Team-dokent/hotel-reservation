@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { RoomsModal } from 'src/app/core/models/site/rooms/rooms';
-import { RoomsService } from 'src/app/core/services/site/rooms/rooms.service';
+import { BookingService } from 'src/app/core/services/site/booking/booking.service';
+import { NotifyService } from '../../../notify/notify.services';
 
 @Component({
   selector: 'app-design2-list-rooms',
@@ -13,12 +14,18 @@ export class Design2ListRoomsComponent implements OnInit {
    @Input() 
    listRooms! : RoomsModal[]
    @Input() typeRom!: string;
+
+   dataNotify! : string ;
  
    constructor(
-     private apiService: RoomsService
+     private apiBooking : BookingService,
+     private sweteAlert  : NotifyService,
    ) { }
 
   ngOnInit(): void {
+
+  
   }
+
 
 }
