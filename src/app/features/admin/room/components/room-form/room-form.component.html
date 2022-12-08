@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Ajouter une chambre</h1>
+<h1 mat-dialog-title>{{ editMode ? "Modifier" : "Ajouter" }} une chambre</h1>
 <div class="mat-dialog-content">
   <form class="example-form" [formGroup]="roomForm">
     <mat-form-field class="example-full-width">
@@ -57,7 +57,12 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Annuler</button>
-  <button mat-raised-button color="primary" (click)="onSubmit()">
-    Ajouter
+  <button
+    [disabled]="roomForm.invalid"
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()"
+  >
+    {{ editMode ? "Modifier" : "Ajouter" }}
   </button>
 </div>
