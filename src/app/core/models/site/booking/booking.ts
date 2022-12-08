@@ -7,5 +7,5 @@ export class BookingModel {
     email!: string;
     phone!: string;
     status!: 'pending' | 'rejected' | 'validated';
+    available!:number
 }
-  

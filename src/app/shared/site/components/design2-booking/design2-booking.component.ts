@@ -25,7 +25,7 @@ export class Design2BookingComponent implements OnInit {
 
   dataNotify !: string;
 
-  
+
   myControl = new FormControl('');
   rooms! : RoomsModal[];
 
@@ -38,7 +38,7 @@ export class Design2BookingComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-   
+
     this.formBooking = this.formBuilder.group({
 
       start:['',Validators.required],
@@ -46,23 +46,42 @@ export class Design2BookingComponent implements OnInit {
       adult : ['', Validators.required],
       roomId : ['', Validators.required],
       phone : ['',
-        [ 
+        [
           Validators.required,
           Validators.pattern("^[0-9]*$"),
-          Validators.minLength(10), 
+          Validators.minLength(10),
         ]
       ],
       email: ['',
           [
-            Validators.required, 
+            Validators.required,
             Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')
           ]
       ],
-    
-    
+
+
     });
 
     this.handleGetAllRoomsByType();
+  }
+
+
+
+  // Get all bookings by type room
+  handleGetAllRoomsByType(){
+    this.apiBooking.getAllRoomByType(this.typeRom).subscribe({
+      next : (data) => {
+        this.rooms = data;
+        console.log(data);
+      },
+      error : (err) => {
+        this.dataNotify = "Oups ! échec d'envoie de message";
+        this.sweteAlert.sweetAlertError(this.dataNotify);
+        return;
+      }
+
+    });
+
   }
 
 
@@ -82,69 +101,39 @@ export class Design2BookingComponent implements OnInit {
     }
 
     this.apiBooking.availableFromRoom(this.formBooking.value).subscribe({
+        next : (data) => {
+          if(Object.keys(data).length > 0){
 
-      next : (data) => {
-        this.dataNotify = "Oups ! échec cette chambre est dégà occupée";
-        this.sweteAlert.sweetAlertError(this.dataNotify);
-        return;
+            this.dataNotify = "Oups ! cette chambre est dégà occupée";
+            this.sweteAlert.sweetAlertError(this.dataNotify);
+            return;
+
+          }else{
+
+            this.apiBooking.registerReservation(this.formBooking.value).subscribe(
+              res => {
+                  this.dataNotify  = "Reservation éffectuée avec succès";
+
+
+                  //this.apiBooking.updateRoomAvailability(this.formBooking.value.id);
+
+                  this.sweteAlert.sweetAlertSuccess(this.dataNotify);
+              },
+              err => {
+                this.dataNotify = "Oups ! une erreur";
+                this.sweteAlert.sweetAlertError(this.dataNotify);
+              })
+          }
       },
       error : (err) => {
-        this.apiBooking.registerReservation(this.formBooking.value).subscribe(
-          res => {
-              this.dataNotify = "réservations";
-              this.sweteAlert.sweetAlertSuccess(this.dataNotify);
-          },
-          err => {
-            alert("Non");
-          }
-        );
+        this.dataNotify = "Oups ! une erreur";
+        this.sweteAlert.sweetAlertError(this.dataNotify);
       }
 
     })
-
-    // this.apiBooking.registerReservation(this.formBooking.value).subscribe(
-    //   // next : (data) => {
-    //   //   this.dataNotify = "réservations";
-    //   //   this.sweteAlert.sweetAlertSuccess(this.dataNotify);
-    //   // },
-    //   // error : (err) => {
-    //   //   this.dataNotify = "Oups ! échec cette champre";
-    //   //   this.sweteAlert.sweetAlertError(this.dataNotify);
-    //   //   return;
-    //   // }
-    //   res => {
-    //     this.dataNotify = "réservations";
-    //      this.sweteAlert.sweetAlertSuccess(this.dataNotify);
-    //   },
-    //     err => {
-    //       alert("Non");
-  
-  
-  
-    //     }
-    
-    // )
-
   }
 
-  
 
-  // Get all bookings by type room
-  handleGetAllRoomsByType(){
-    this.apiBooking.getAllRoomByType(this.typeRom).subscribe({
-      next : (data) => {
-        this.rooms = data;
-        console.log(data);
-      },
-      error : (err) => {
-        this.dataNotify = "Oups ! échec d'envoie de message";
-        this.sweteAlert.sweetAlertError(this.dataNotify);
-        return;
-      }
-
-    });
-
-  }
 
 
 }
