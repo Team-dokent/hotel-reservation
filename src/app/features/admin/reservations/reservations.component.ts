@@ -1,24 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Reservation } from 'src/app/core/models/reservation.model';
+import { ReservationsService } from 'src/app/core/services/reservations/reservations.service';
+import { UpdateReservationComponent } from './components/update-reservation/update-reservation/update-reservation.component';
 
-export interface PeriodicElement {
+export interface UserData {
+  id: string;
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  progress: string;
+  fruit: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+/** Constants used to fill up our data base. */
+const FRUITS: string[] = [
+  'blueberry',
+  'lychee',
+  'kiwi',
+  'mango',
+  'peach',
+  'lime',
+  'pomegranate',
+  'pineapple',
+];
+const NAMES: string[] = [
+  'Maia',
+  'Asher',
+  'Olivia',
+  'Atticus',
+  'Amelia',
+  'Jack',
+  'Charlotte',
+  'Theodore',
+  'Isla',
+  'Oliver',
+  'Isabella',
+  'Jasper',
+  'Cora',
+  'Levi',
+  'Violet',
+  'Arthur',
+  'Mia',
+  'Thomas',
+  'Elizabeth',
 ];
 
 @Component({
@@ -27,12 +53,54 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./reservations.component.scss'],
 })
 export class ReservationsComponent implements OnInit {
-  constructor() {}
-  ngOnInit(): void {}
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayedColumns: string[] = [
+    'email',
+    'dateDebut',
+    'dateEnd',
+    'phone',
+    'status',
+    'actions',
+  ];
+  dataSource!: MatTableDataSource<Reservation>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(
+    private ReservationsService: ReservationsService,
+    public dialog: MatDialog
+  ) {}
+
+  ngOnInit(): void {
+    this.getReservations();
+  }
+
+  getReservations(): void {
+    this.ReservationsService.getReservations().subscribe((reservations) => {
+      const data = reservations;
+      this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+  }
+
+  openDialog(data: Reservation): void {
+    const dialogRef = this.dialog.open(UpdateReservationComponent, {
+      data,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      this.getReservations();
+    });
+  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }

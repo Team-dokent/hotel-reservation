@@ -45,28 +45,104 @@
       "createdAt": "2022-12-07T18:22:08.694Z"
     },
     {
-      "title": "Amadou Benthe DIALLO",
+      "title": "Chambre 7",
       "description": "DIALLO",
       "pricePerNight": 4444,
       "typeRoom": "rooms-for-2-people",
       "placeNumber": 555555,
       "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "be53601b-c2cc-400c-a451-b409d8034f09",
-      "adult": 2,
-      "children": 2,
-      "createdAt": "2022-12-08T09:13:43.224Z"
+      "id": "be53601b-c2cc-400c-a451-b409d8034f09"
     },
     {
-      "title": "sssssssssssssssss",
+      "title": "Chambre 25",
       "description": "ssssssssssssssssssss",
       "pricePerNight": 444,
       "typeRoom": "rooms-for-4-people",
       "placeNumber": 4444,
       "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "2cb93ddc-34b3-4fa1-a06d-1a92c7455106",
+      "id": "2cb93ddc-34b3-4fa1-a06d-1a92c7455106"
+    },
+    {
+      "title": "Chambre de qqqqq",
+      "description": "ssssssssssssssss",
+      "pricePerNight": 78,
+      "typeRoom": "rooms-for-4-people",
+      "placeNumber": 5555,
+      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
+      "id": "e9648824-5d15-4cc6-95a5-b1df3181806c"
+    },
+    {
+      "title": "Chmbre test",
+      "description": "Chamùbre test description",
+      "pricePerNight": 52,
+      "typeRoom": "sequels",
+      "placeNumber": 56,
+      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
+      "id": "060f58dc-df74-4a7e-b15f-38c800983bf2"
+    },
+    {
+      "title": "Cambre 52dd",
+      "description": "azertyuiop^$$",
+      "pricePerNight": 80,
+      "typeRoom": "rooms-for-4-people",
+      "placeNumber": 52,
+      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
+      "id": "6423e44d-45a3-4d06-94ce-e937ff97c881",
       "adult": 2,
       "children": 2,
-      "createdAt": "2022-12-08T09:14:20.822Z"
+      "createdAt": "2022-12-08T14:54:33.312Z"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "number",
+      "dateStart": "string",
+      "dateEnd": "string",
+      "roomsId": "number",
+      "typeRoom": "string",
+      "email": "string",
+      "phone": "string",
+      "status": "validated"
+    },
+    {
+      "id": "number",
+      "dateStart": "string",
+      "dateEnd": "string",
+      "roomsId": "number",
+      "typeRoom": "string",
+      "email": "string",
+      "phone": "string",
+      "status": "rejected"
+    },
+    {
+      "id": "number",
+      "dateStart": "string",
+      "dateEnd": "string",
+      "roomsId": "number",
+      "typeRoom": "string",
+      "email": "string",
+      "phone": "string",
+      "status": "validated"
+    },
+    {
+      "id": "number",
+      "dateStart": "string",
+      "dateEnd": "string",
+      "roomsId": "number",
+      "typeRoom": "string",
+      "email": "string",
+      "phone": "string",
+      "status": "pending"
+    },
+    {
+      "id": "number",
+      "dateStart": "string",
+      "dateEnd": "string",
+      "roomsId": "number",
+      "typeRoom": "string",
+      "email": "string",
+      "phone": "string",
+      "status": "pending"
     }
   ],
   "users": [
@@ -81,13 +157,14 @@
       "password": "password"
     },
     {
-      "title": "DIALLO  fffffffffff aaaa",
-      "description": "amadbenthebagnandiallo@gmail.com",
-      "pricePerNight": 444,
-      "typeRoom": "rooms-for-4-people",
-      "placeNumber": 444444444,
-      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": 4
+      "firstName": "aaaaaaaaa",
+      "lastName": "AAAA",
+      "email": "azertyu@test.test",
+      "phone": "62530",
+      "role": "hotel-reservations-manager",
+      "id": "cbdd72da-46de-4b0b-81d8-72da828752b8",
+      "isActive": true,
+      "password": "password"
     }
   ],
   "posts": [

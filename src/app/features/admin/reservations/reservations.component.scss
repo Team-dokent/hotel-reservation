@@ -1,0 +1,17 @@
+.span {
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.rejected {
+  background-color: red;
+}
+
+.validated {
+  background-color: green;
+}
+
+.pending {
+  background-color: #ffd775;
+}
