@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>Ajouter une chambre</h1>
+<div class="mat-dialog-content">
+  <form class="example-form" [formGroup]="roomForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Titre</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="title"
+        placeholder="Titre de la maison"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Description</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="description"
+        placeholder="Description"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Prix pour une nuit</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="pricePerNight"
+        placeholder="Prix pour une nuit"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Type de chambre</mat-label>
+      <mat-select formControlName="typeRoom">
+        <mat-option *ngFor="let room of typeRooms" [value]="room.value">
+          {{ room.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre de place</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="placeNumber"
+        placeholder="Nombre de place"
+      />
+    </mat-form-field>
+
+    <div>
+      <input type="file" formControlName="image" class="upload-image" />
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">
+    Ajouter
+  </button>
+</div>
