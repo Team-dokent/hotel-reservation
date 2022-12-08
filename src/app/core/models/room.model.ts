@@ -1,5 +1,5 @@
 export interface Room {
-  id: number;
+  id: number | string;
   title: string;
   image: string;
   description: string;
@@ -7,4 +7,6 @@ export interface Room {
   adult: number;
   children: number;
   typeRoom: string;
+  createdAt: Date;
+  placeNumber: number;
 }

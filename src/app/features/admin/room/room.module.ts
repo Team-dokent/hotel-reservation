@@ -6,9 +6,10 @@ import { RoomRoutingModule } from './room-routing.module';
 import { RoomComponent } from './room.component';
 import { RoomFormComponent } from './components/room-form/room-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
-  declarations: [RoomComponent, RoomFormComponent],
+  declarations: [RoomComponent, RoomFormComponent, ConfirmDialogComponent],
   imports: [
     CommonModule,
     RoomRoutingModule,

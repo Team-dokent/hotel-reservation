@@ -8,10 +8,10 @@ import {
 } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Room } from 'src/app/core/models/room.model';
 import { User } from 'src/app/core/models/user';
-import { UsersService } from 'src/app/core/services/users/users.service';
-import { DeleteDialogComponent } from '../users/components/delete-dialog/delete-dialog.component';
-import { UserFormComponent } from '../users/components/user-form/user-form.component';
+import { RoomService } from 'src/app/core/services/room/room.service';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { RoomFormComponent } from './components/room-form/room-form.component';
 
 @Component({
@@ -20,8 +20,15 @@ import { RoomFormComponent } from './components/room-form/room-form.component';
   styleUrls: ['./room.component.scss'],
 })
 export class RoomComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'email', 'role', 'phone', 'actions'];
-  dataSource!: MatTableDataSource<User>;
+  displayedColumns: string[] = [
+    'title',
+    'placeNumber',
+    'pricePerNight',
+    'typeRoom',
+    'date',
+    'actions',
+  ];
+  dataSource!: MatTableDataSource<Room>;
   durationInSeconds = 2;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
@@ -31,18 +38,18 @@ export class RoomComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private usersService: UsersService,
+    private roomService: RoomService,
     private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
-    this.getUsers();
+    this.getRooms();
   }
 
-  getUsers() {
-    this.usersService.getUsers().subscribe((users) => {
-      const userData = users;
-      this.dataSource = new MatTableDataSource(userData);
+  getRooms() {
+    this.roomService.getRooms().subscribe((rooms: Room[]) => {
+      const roomData = rooms;
+      this.dataSource = new MatTableDataSource(roomData);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
@@ -64,17 +71,17 @@ export class RoomComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.getUsers();
+      this.getRooms();
     });
   }
 
-  openDialogDelete(user: User): void {
-    const dialogRef = this.dialog.open(DeleteDialogComponent, {
-      data: user,
+  openDialogDelete(room: Room): void {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      data: room,
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.getUsers();
+      this.getRooms();
     });
   }
 

@@ -1,26 +1,6 @@
 {
   "users": [
     {
-      "id": 2,
-      "firstName": "John test",
-      "lastName": "Doe",
-      "email": "hotel-reservations-manager@test.com",
-      "phone": "0598562312",
-      "password": "123456789",
-      "isActive": true,
-      "role": "hotel-reservations-manager"
-    },
-    {
-      "id": 3,
-      "firstName": "Michelle",
-      "lastName": "MAKISSI",
-      "email": "project-manager@test.com",
-      "phone": "0598562312",
-      "password": "123456789",
-      "isActive": true,
-      "role": "project-manager"
-    },
-    {
       "firstName": "Amadou Benthe",
       "lastName": "DIALLO",
       "email": "amadbenthebagnandiallo@gmail.com",
@@ -29,33 +9,18 @@
       "id": "496fe6ef-a86d-4153-bde0-e09df204f1c5",
       "isActive": true,
       "password": "password"
+    },
+    {
+      "title": "DIALLO  fffffffffff aaaa",
+      "description": "amadbenthebagnandiallo@gmail.com",
+      "pricePerNight": 444,
+      "typeRoom": "rooms-for-4-people",
+      "placeNumber": 444444444,
+      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
+      "id": 4
     }
   ],
   "rooms": [
-    {
-      "id": 1,
-      "title": "Chambre d'été I",
-      "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
-      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
-      "pricePerNight": 175000,
-      "adult": 2,
-      "children": 4,
-      "typeRoom": "rooms2Person",
-      "createdAt": "2013",
-      "placeNumber": 2
-    },
-    {
-      "id": 2,
-      "title": "Chambre d'été I",
-      "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
-      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
-      "pricePerNight": 175000,
-      "adult": 2,
-      "children": 4,
-      "typeRoom": "rooms4Person",
-      "createdAt": "2013",
-      "placeNumber": 4
-    },
     {
       "id": 2,
       "title": "Chambre d'été I",
@@ -67,6 +32,18 @@
       "typeRoom": "suite",
       "createdAt": "2013",
       "placeNumber": null
+    },
+    {
+      "title": "Chambre d'été Iddddddddddddddddddddddddd",
+      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
+      "pricePerNight": 175000,
+      "typeRoom": "rooms2Person",
+      "placeNumber": 2,
+      "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
+      "adult": 2,
+      "children": 2,
+      "id": 3,
+      "createdAt": "2022-12-07T18:22:08.694Z"
     }
   ],
   "posts": [
