@@ -20,7 +20,18 @@ export class BookingService {
 
   getAllRoomByType(roomType: string): Observable<RoomsModal[]> {
 
-    const room = this.http.get<RoomsModal[]>(this.apiUrl + '/rooms/?typeRoom=' + roomType);
+    const room = this.http.get<RoomsModal[]>(this.apiUrl + '/rooms/?typeRoom=' + roomType  + '&' + 'available=' + 0);
+    if (!room) {
+      throw new Error('Oups ! cette chambre n\'existe pas !');
+    } else {
+      return room;
+    }
+  }
+
+  // Recupere tous les chambres disponibles
+  getAllRoomByAvailable(): Observable<RoomsModal[]> {
+    const room = this.http.get<RoomsModal[]>(this.apiUrl + '/rooms/?available=' + 0);
+  
     if (!room) {
       throw new Error('Oups ! cette chambre n\'existe pas !');
     } else {
@@ -31,7 +42,12 @@ export class BookingService {
 
   registerReservation(dataForm: any): Observable<boolean> {
 
-    return this.http.post<any>(this.apiUrl + '/reservations', dataForm).pipe(
+    const reservation: BookingModel = {
+      ...dataForm,
+      status: 'pending'
+    }
+
+    return this.http.post<any>(this.apiUrl + '/reservations', reservation).pipe(
       map((res: any) => {
         return res;
       })
@@ -43,7 +59,7 @@ export class BookingService {
   // available from the room
   availableFromRoom(dataForm: any): Observable<any> {
 
-    let reservation = this.http.get<BookingModel[]>(this.apiUrl + '/reservations/?dateStart=' + dataForm.start + '&' + 'dateEnd=' + dataForm.end + '&' + 'id=' + dataForm.roomId)
+    let reservation = this.http.get<BookingModel[]>(this.apiUrl + '/reservations/?start=' + dataForm.start + '&' + 'end=' + dataForm.end + '&' + 'roomId=' + dataForm.roomId)
       .pipe(
         map((res: any) => {
           return res;
@@ -65,27 +81,9 @@ export class BookingService {
     }
   }
 
-
   //change room availability
-  updateRoomAvailability(id: any) {
-
-    let room = this.getAllRoomById(id);
-
-
-    console.log("Update " + room.subscribe());
-
-
-    // const room: RoomsModal = {
-    //   id: data.id,
-
-    // };
-
-    // return this.http.put(this.apiUrl , student, { headers: this.headers }).pipe(
-    //   map((res: any) => {
-    //     return res;
-    //   })
-    // );
-
+  updateRoomAvailability(data : Partial<RoomsModal>  , id: any) : Observable<any> {
+    return this.http.put(`${this.apiUrl}/rooms/${id}`, data);
   }
 
 }

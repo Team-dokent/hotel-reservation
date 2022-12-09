@@ -2,8 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
 import { NotifyService } from '../../notify/notify.services';
 import { BookingService } from 'src/app/core/services/site/booking/booking.service';
-import { BookingModel } from 'src/app/core/models/site/booking/booking';
 import { RoomsModal } from 'src/app/core/models/site/rooms/rooms';
+import { RoomsService } from 'src/app/core/services/site/rooms/rooms.service';
 
 
 
@@ -34,6 +34,7 @@ export class Design2BookingComponent implements OnInit {
     private formBuilder : FormBuilder,
     private sweteAlert  : NotifyService,
     private apiBooking : BookingService,
+    private apiRoom : RoomsService
 
   ) { }
 
@@ -72,7 +73,7 @@ export class Design2BookingComponent implements OnInit {
     this.apiBooking.getAllRoomByType(this.typeRom).subscribe({
       next : (data) => {
         this.rooms = data;
-        console.log(data);
+        
       },
       error : (err) => {
         this.dataNotify = "Oups ! échec d'envoie de message";
@@ -113,9 +114,24 @@ export class Design2BookingComponent implements OnInit {
             this.apiBooking.registerReservation(this.formBooking.value).subscribe(
               res => {
                   this.dataNotify  = "Reservation éffectuée avec succès";
+                  
+                  this.apiBooking.getAllRoomById(this.formBooking.value.roomId).subscribe({
+                    next : (data) => {
 
-
-                  //this.apiBooking.updateRoomAvailability(this.formBooking.value.id);
+                      let room : RoomsModal = data[0]
+                      room.available = 1
+                      
+                      this.apiBooking.updateRoomAvailability(room,this.formBooking.value.roomId).subscribe();
+                      this.handleGetAllRoomsByType();
+                      this.formBooking.reset();
+      
+                    
+                    },
+                    error : (error) => {
+                      this.dataNotify = "Oups ! une erreur";
+                      this.sweteAlert.sweetAlertError(this.dataNotify);
+                    }
+                  })
 
                   this.sweteAlert.sweetAlertSuccess(this.dataNotify);
               },
@@ -132,6 +148,7 @@ export class Design2BookingComponent implements OnInit {
 
     })
   }
+
 
 
 

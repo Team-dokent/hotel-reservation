@@ -24,7 +24,6 @@ export class Design2ListRoomsComponent implements OnInit {
 
   ngOnInit(): void {
 
-  
   }
 
 

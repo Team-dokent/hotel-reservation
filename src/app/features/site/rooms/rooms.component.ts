@@ -15,7 +15,6 @@ export class RoomsComponent implements OnInit {
  
   rooms! : RoomsModal[];
   typeRoom2 = "rooms2Person";
-  typeSuite = "suite";
 
   constructor(
     private apiService: RoomsService

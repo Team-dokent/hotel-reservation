@@ -27,9 +27,17 @@ const routes: Routes = [
           import('./contact/contact.module').then((m) => m.ContactModule),
       },
       {
-        path: 'rooms',
+        path: 'rooms2Persons',
         loadChildren: () =>
           import('./rooms/rooms.module').then((m) => m.RoomsModule),
+      },
+      {
+        path: 'rooms4Persons',
+        loadChildren: () => import('./rooms4/rooms4.module').then((m) => m.Rooms4Module),
+      },
+      {
+        path: 'roomsSuite',
+        loadChildren: () => import('./room-suite/room-suite.module').then((m) => m.RoomSuiteModule),
       },
     ],
   },

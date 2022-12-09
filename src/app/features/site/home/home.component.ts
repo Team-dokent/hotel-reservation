@@ -1,6 +1,7 @@
 import { Component,  Input,  OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { RoomsModal } from 'src/app/core/models/site/rooms/rooms';
+import { BookingService } from 'src/app/core/services/site/booking/booking.service';
 import { RoomsService } from 'src/app/core/services/site/rooms/rooms.service';
 // import Swiper core and required modules
 import SwiperCore, {Autoplay,EffectCube, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
@@ -22,10 +23,13 @@ export class HomeComponent implements OnInit {
   typeRoom2 = "rooms2Person";
   typeSuite = "suite";
 
+  roomsBooking! : RoomsModal[];
+
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(
-    private apiService: RoomsService
+    private apiService: RoomsService,
+    private apiBooking : BookingService
   ) { }
 
   ngOnInit(): void {
@@ -45,5 +49,6 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
 
 }

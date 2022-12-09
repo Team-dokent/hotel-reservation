@@ -28,6 +28,7 @@ import { RoomSuiteComponent } from './room-suite/room-suite.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { SiteComponent } from './site.component';
 import { SiteLayoutComponent } from 'src/app/layouts/site-layout/site-layout.component';
+import { BookingDetailComponent } from 'src/app/shared/site/components/booking-detail/booking-detail.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { SiteLayoutComponent } from 'src/app/layouts/site-layout/site-layout.com
    Rooms4Component,
    RoomSuiteComponent,
    SiteComponent,
-   SiteLayoutComponent
+   SiteLayoutComponent,
+   BookingDetailComponent
 
 
    

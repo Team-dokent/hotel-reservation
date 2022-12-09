@@ -10,8 +10,8 @@
 <div class="room-suits-page-2 pt-120 mb-120">
     <div class="container">
         <div class="row  py-5">
-            <div class="col-lg-3 col-md-6 col-10" *ngFor="let r of listRooms  ">
-                <div class="room-suits-wrrap"  *ngIf="r.typeRoom == typeRom" >
+            <div class="col-lg-3 col-md-6 col-10" *ngFor="let r of listRooms   ">
+                <div class="room-suits-wrrap"  *ngIf="r.typeRoom === typeRom" >
                     <div class="room-suits-img ">
                         <img src="{{r.image}}" alt="{{r.title}}" width="auto" height="250"
                             style="background-size:cover;object-fit: cover;">

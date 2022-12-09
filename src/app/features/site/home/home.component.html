@@ -23,16 +23,16 @@
       </div>
     </div>
   </div>
-  <div class="hotel_booking_area position">
+  <div class="hotel_booking_area position ">
     <div class="container">
-      <div class="hotel_booking_table d-none d-md-none d-lg-flex">
-        <div class="col-lg-3 col-md-12 col-12 text-center">
-          <h2 class="text-yellow">
+      <div class="hotel_booking_table d-none d-md-none d-lg-flex rounded">
+        <div class="col-lg-3 col-md-12 col-12 text-center reservation">
+          <h2 class="text-yellow h2">
             Reserver<br />
             une chambre
           </h2>
         </div>
-        <div class="col-lg-6 col-md-12 col-12">
+        <!-- <div class="col-lg-6 col-md-12 col-12">
           <div class="row">
             <div class="col-lg-6">
               <input
@@ -88,7 +88,12 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
+        <div class="col-lg-9 col-md-12 col-12 booking">
+
+            <app-booking-shared ></app-booking-shared>
+          
+        </div> 
       </div>
     </div>
   </div>
@@ -317,7 +322,21 @@
             />
           </div>
           <div class="con" >
-            <h5><a href="/rooms">Chambre</a></h5>
+            <h5><a href="/rooms2Persons">Chambre 2 Personnes</a></h5>
+            <div class="line mt-3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item">
+          <div class="position-re o-hidden">
+            <img
+              src="https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/173581390.jpg?k=7dcd0a4c58029b04e1905aae3159a0eb97e7b174328828d280911e68dea30e4c&o=&hp=1"
+              alt=""
+            />
+          </div>
+          <div class="con" >
+            <h5><a href="/rooms4Persons">Chambre 4 Personnes</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
@@ -331,12 +350,12 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Suite</a></h5>
+            <h5><a href="/roomsSuite">Suite</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="item">
           <div class="position-re o-hidden">
             <img
@@ -350,7 +369,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="item">
           <div class="position-re o-hidden">
             <img

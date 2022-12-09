@@ -5,27 +5,25 @@ import { BookingService } from 'src/app/core/services/site/booking/booking.servi
 import { NotifyService } from '../../notify/notify.services';
 
 @Component({
-  selector: 'app-booking-shared',
-  templateUrl: './booking-shared.component.html',
-  styleUrls: ['./booking-shared.component.scss']
+  selector: 'app-booking-detail',
+  templateUrl: './booking-detail.component.html',
+  styleUrls: ['./booking-detail.component.scss']
 })
-export class BookingSharedComponent implements OnInit {
+export class BookingDetailComponent implements OnInit {
 
   formBooking!: FormGroup;
 
-  @Input() typeRom!: string;
-  @Input() listRoomsBooking!: RoomsModal[];
-
+  @Input() room! : RoomsModal;
 
   dataNotify !: string;
   myControl = new FormControl('');
-  rooms! : RoomsModal[];
 
 
   constructor(
     private formBuilder : FormBuilder,
     private sweteAlert  : NotifyService,
     private apiBooking : BookingService,
+
 
   ) { }
 
@@ -51,13 +49,17 @@ export class BookingSharedComponent implements OnInit {
           ]
       ],
 
+      
+      
 
     });
+
+    console.log( "salut " ,  this.room);
     
 
     //this.handleGetAllRoomsByType();
 
-    this.handleGetAllRoomsAvailble();
+ 
   }
 
 
@@ -95,7 +97,6 @@ export class BookingSharedComponent implements OnInit {
       return;
     }
 
-   
     this.apiBooking.availableFromRoom(this.formBooking.value).subscribe({
       next : (data) => {
         if(Object.keys(data).length > 0){
@@ -118,7 +119,7 @@ export class BookingSharedComponent implements OnInit {
                     
                     this.apiBooking.updateRoomAvailability(room,this.formBooking.value.roomId).subscribe();
                     this.formBooking.reset();
-                    this.handleGetAllRoomsAvailble();
+                    
                   
                   },
                   error : (error) => {
@@ -145,20 +146,6 @@ export class BookingSharedComponent implements OnInit {
 
     
  
-  }
-
-
-
-  // recuperer tous les champs disponibles
-  handleGetAllRoomsAvailble(){
-    this.apiBooking.getAllRoomByAvailable().subscribe({
-      next : (data) => {
-        this.rooms = data;
-      },
-      error : (err) => {
-        console.log( err);
-      }
-    })
   }
 
 

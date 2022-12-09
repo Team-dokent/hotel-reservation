@@ -212,9 +212,20 @@
           </span>
         </div>
 
-        <marquee behavior="" direction="" class="text-danger">Il nous reste 2 chambres disponibles</marquee>
+        <marquee behavior="" direction="" class="text-danger py-4"
+            *ngIf="room.available == 1"
+            >
+            Oups! cette chambre est disponible voir occupée
+          
+        </marquee>
 
-        <app-booking-shared></app-booking-shared>
+        <div *ngIf="room.available == 0">
+            <!-- <app-booking-shared></app-booking-shared> -->
+            <app-booking-detail [room]="roomDetail"></app-booking-detail> 
+        </div>
+
+      
+        
       </div>
     </div>
   </div>

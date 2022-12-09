@@ -40,18 +40,18 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "rooms2Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 3,
-      "title": "Chambre d'été III",
+      "title": "Chambre loyau III",
       "image": "https://t4.ftcdn.net/jpg/01/66/35/45/240_F_166354596_LIr9E3OP6zOJYUWx0z9KAOSp8VKiQsvb.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 171000,
       "adult": 2,
       "children": 4,
       "typeRoom": "rooms2Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 4,
@@ -73,40 +73,40 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "rooms4Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 6,
-      "title": "Chambre d'été II",
+      "title": "Chambre Duplex II",
       "image": "https://t3.ftcdn.net/jpg/02/71/08/28/240_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 170000,
       "adult": 2,
       "children": 5,
       "typeRoom": "rooms4Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 7,
-      "title": "Chambre d'été III",
+      "title": "Chambre Double III",
       "image": "https://t4.ftcdn.net/jpg/01/66/35/45/240_F_166354596_LIr9E3OP6zOJYUWx0z9KAOSp8VKiQsvb.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 175000,
       "adult": 2,
       "children": 4,
       "typeRoom": "rooms4Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 8,
-      "title": "Chambre d'été VI",
+      "title": "Chambre Royale VI",
       "image": "https://t4.ftcdn.net/jpg/03/14/18/93/240_F_314189357_XfwtOLZy1dEJr1J5V3bV8BlqfgDBvbbI.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 165000,
       "adult": 2,
       "children": 4,
       "typeRoom": "rooms4Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 9,
@@ -117,7 +117,7 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "suite",
-      "available": 0
+      "available": 1
     },
     {
       "id": 10,
@@ -139,7 +139,7 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "suite",
-      "available": 0
+      "available": 1
     },
     {
       "id": 12,
@@ -150,7 +150,7 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "suite",
-      "available": 0
+      "available": 1
     }
   ],
   "users": [
@@ -204,31 +204,74 @@
   },
   "reservations": [
     {
-      "start": "2022-12-08T00:00:00.000Z",
-      "end": "2022-12-17T00:00:00.000Z",
-      "adult": "2",
-      "roomId": 1,
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
       "phone": "0748753781",
       "email": "aube@gmail.com",
+      "status": "pending",
       "id": 1
     },
     {
-      "start": "2022-12-08T00:00:00.000Z",
-      "end": "2022-12-23T00:00:00.000Z",
-      "adult": "2",
-      "roomId": 2,
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 7,
       "phone": "0748753781",
       "email": "aube@gmail.com",
+      "status": "pending",
       "id": 2
     },
     {
-      "start": "2022-12-08T00:00:00.000Z",
-      "end": "2022-12-17T00:00:00.000Z",
+      "start": "2022-12-21T00:00:00.000Z",
+      "end": "2022-12-23T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 7,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "pending",
+      "id": 3
+    },
+    {
+      "start": "2022-12-16T00:00:00.000Z",
+      "end": "2022-12-24T00:00:00.000Z",
+      "adult": "3",
+      "roomId": 7,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "pending",
+      "id": 4
+    },
+    {
+      "start": "2022-12-16T00:00:00.000Z",
+      "end": "2022-12-24T00:00:00.000Z",
       "adult": "1",
       "roomId": 3,
       "phone": "0748753781",
       "email": "aube@gmail.com",
-      "id": 3
+      "status": "pending",
+      "id": 5
+    },
+    {
+      "start": "2022-12-10T00:00:00.000Z",
+      "end": "2022-12-17T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 5,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "pending",
+      "id": 6
+    },
+    {
+      "start": "2022-12-20T00:00:00.000Z",
+      "end": "2022-12-21T00:00:00.000Z",
+      "adult": "3",
+      "roomId": 9,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "pending",
+      "id": 7
     }
   ]
 }

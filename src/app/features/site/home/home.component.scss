@@ -128,8 +128,19 @@ button:focus {
 
 
 /*============= End banner_area css =============*/
+
+section .h2 {
+  font-size: 25px;
+  line-height: 60px;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
 .hotel_booking_table {
-  background:rgba(0, 0, 0, 0.5);
+  background:rgb(249, 246, 246);
+  //background:rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid red;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -137,7 +148,8 @@ button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
+} 
+
 
 .banner_area {
   background: #04091e;
