@@ -25,6 +25,7 @@ export class RoomService {
       adult: 2,
       children: 2,
       createdAt: new Date(),
+      available: 0,
     };
 
     return this.http.post<Room>(`${this.baseUrl}/rooms`, room);

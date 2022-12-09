@@ -9,4 +9,5 @@ export interface Room {
   typeRoom: string;
   createdAt: Date;
   placeNumber: number;
+  available: number;
 }

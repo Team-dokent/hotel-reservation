@@ -8,3 +8,9 @@ export class User {
   role!: string;
   isActive!: boolean;
 }
+
+export enum Profile {
+  HotelManager = 'hotel-manager',
+  HotelReservationsManager = 'hotel-reservations-manager',
+  ProjectManager = 'project-manager',
+}
