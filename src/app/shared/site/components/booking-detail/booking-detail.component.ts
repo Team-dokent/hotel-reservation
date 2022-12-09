@@ -54,7 +54,7 @@ export class BookingDetailComponent implements OnInit {
 
     });
 
-    console.log( "salut " ,  this.room);
+   // console.log( "salut " ,  this.room);
     
 
     //this.handleGetAllRoomsByType();

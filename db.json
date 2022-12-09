@@ -31,10 +31,10 @@
       "typeRoom": "rooms2Person",
       "createdAt": "2013",
       "placeNumber": null,
-      "available": 0
+      "available": 1
     },
     {
-      "id" : 1,
+      "id": 1,
       "title": "Chambre d'été",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 175000,
@@ -65,7 +65,7 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "rooms2Person",
-      "available": 0
+      "available": 1
     },
     {
       "id": 5,
@@ -153,7 +153,7 @@
       "adult": 2,
       "children": 4,
       "typeRoom": "suite",
-      "available": 0
+      "available": 1
     }
   ],
   "users": [
@@ -208,13 +208,43 @@
   "reservations": [
     {
       "start": "2022-12-09T00:00:00.000Z",
-      "end": "2022-12-10T00:00:00.000Z",
-      "adult": "2",
+      "end": "2022-12-17T00:00:00.000Z",
+      "adult": "1",
       "roomId": 3,
       "phone": "0748753781",
       "email": "aube@gmail.com",
       "status": "pending",
       "id": 1
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-17T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 2,
+      "phone": "0748753781",
+      "email": "aubembali@gmail.com",
+      "status": "pending",
+      "id": 2
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-17T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 4,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "pending",
+      "id": 3
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "2",
+      "roomId": 12,
+      "phone": "00745753955",
+      "email": "aube@gmail.com",
+      "status": "pending",
+      "id": 4
     }
   ]
 }
