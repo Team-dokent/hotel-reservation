@@ -1,3 +1,4 @@
+import { TokenService } from './../../../core/services/token/token.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
@@ -9,7 +10,7 @@ import {
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Room } from 'src/app/core/models/room.model';
-import { User } from 'src/app/core/models/user';
+import { Profile, User } from 'src/app/core/models/user';
 import { RoomService } from 'src/app/core/services/room/room.service';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { RoomFormComponent } from './components/room-form/room-form.component';
@@ -20,6 +21,7 @@ import { RoomFormComponent } from './components/room-form/room-form.component';
   styleUrls: ['./room.component.scss'],
 })
 export class RoomComponent implements OnInit {
+  currentUser!: User | null;
   displayedColumns: string[] = [
     'title',
     'placeNumber',
@@ -37,12 +39,14 @@ export class RoomComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(
+    private tokenService: TokenService,
     public dialog: MatDialog,
     private roomService: RoomService,
     private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
+    this.currentUser = this.tokenService.getCurrentUser();
     this.getRooms();
   }
 
@@ -53,6 +57,18 @@ export class RoomComponent implements OnInit {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
+  }
+
+  isHotelManager(): boolean {
+    return this.currentUser?.role === Profile.HotelManager;
+  }
+
+  isHotelReservationsManager(): boolean {
+    return this.currentUser?.role === Profile.HotelReservationsManager;
+  }
+
+  isProjectmanager(): boolean {
+    return this.currentUser?.role === Profile.ProjectManager;
   }
 
   applyFilter(event: Event) {

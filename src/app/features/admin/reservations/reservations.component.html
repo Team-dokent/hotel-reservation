@@ -2,9 +2,7 @@
   <div class="row mt-5">
     <div class="d-flex">
       <mat-card-title>Reservations</mat-card-title>
-      <div class="ms-auto">
-        <!-- <button mat-raised-button>Ajouter</button> -->
-      </div>
+      <div class="ms-auto"></div>
     </div>
   </div>
 
@@ -71,6 +69,7 @@
             (click)="openDialog(row)"
             mat-button
             color="primary"
+            *ngIf="isHotelReservationsManager()"
           >
             Details
           </button>

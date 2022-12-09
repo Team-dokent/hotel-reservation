@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { MatDialog } from '@angular/material/dialog';
-import { User } from 'src/app/core/models/user';
+import { Profile, User } from 'src/app/core/models/user';
 import { UsersService } from 'src/app/core/services/users/users.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -12,6 +12,7 @@ import {
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 import { DeleteDialogComponent } from 'src/app/features/admin/users/components/delete-dialog/delete-dialog.component';
+import { TokenService } from 'src/app/core/services/token/token.service';
 
 @Component({
   selector: 'app-users',
@@ -19,8 +20,7 @@ import { DeleteDialogComponent } from 'src/app/features/admin/users/components/d
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-  animal!: string;
-  name!: string;
+  currentUser!: User | null;
   displayedColumns: string[] = ['name', 'email', 'role', 'phone', 'actions'];
   dataSource!: MatTableDataSource<User>;
   durationInSeconds = 2;
@@ -31,13 +31,27 @@ export class UsersComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(
+    private tokenService: TokenService,
     public dialog: MatDialog,
     private usersService: UsersService,
     private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
+    this.currentUser = this.tokenService.getCurrentUser();
     this.getUsers();
+  }
+
+  isHotelManager(): boolean {
+    return this.currentUser?.role === Profile.HotelManager;
+  }
+
+  isHotelReservationsManager(): boolean {
+    return this.currentUser?.role === Profile.HotelReservationsManager;
+  }
+
+  isProjectmanager(): boolean {
+    return this.currentUser?.role === Profile.ProjectManager;
   }
 
   getUsers() {
@@ -64,9 +78,8 @@ export class UsersComponent implements OnInit {
       data,
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
+    dialogRef.afterClosed().subscribe(() => {
       this.getUsers();
-      this.animal = result;
     });
   }
 
@@ -75,8 +88,7 @@ export class UsersComponent implements OnInit {
       data: user,
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      this.animal = result;
+    dialogRef.afterClosed().subscribe(() => {
       this.getUsers();
     });
   }

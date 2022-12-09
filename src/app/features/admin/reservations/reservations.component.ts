@@ -1,3 +1,4 @@
+import { Profile, User } from 'src/app/core/models/user';
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
@@ -5,6 +6,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Reservation } from 'src/app/core/models/reservation.model';
 import { ReservationsService } from 'src/app/core/services/reservations/reservations.service';
+import { TokenService } from 'src/app/core/services/token/token.service';
 import { UpdateReservationComponent } from './components/update-reservation/update-reservation/update-reservation.component';
 
 export interface UserData {
@@ -53,6 +55,7 @@ const NAMES: string[] = [
   styleUrls: ['./reservations.component.scss'],
 })
 export class ReservationsComponent implements OnInit {
+  currentUser!: User | null;
   displayedColumns: string[] = [
     'email',
     'dateDebut',
@@ -67,11 +70,13 @@ export class ReservationsComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(
+    private tokenService: TokenService,
     private ReservationsService: ReservationsService,
     public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
+    this.currentUser = this.tokenService.getCurrentUser();
     this.getReservations();
   }
 
@@ -82,6 +87,10 @@ export class ReservationsComponent implements OnInit {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
+  }
+
+  isHotelReservationsManager(): boolean {
+    return this.currentUser?.role === Profile.HotelReservationsManager;
   }
 
   openDialog(data: Reservation): void {
