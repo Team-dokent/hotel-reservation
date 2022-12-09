@@ -21,37 +21,38 @@
   ],
   "rooms": [
     {
-      "id": 1,
+      "id": 2,
       "title": "Chambre d'été I",
       "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 175000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms2Person",
+      "typeRoom": "suite",
+      "createdAt": "2013",
+      "placeNumber": null,
       "available": 0
     },
     {
-      "id": 2,
-      "title": "Chambre d'été II",
-      "image": "https://t3.ftcdn.net/jpg/02/71/08/28/240_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg",
+      "title": "Chambre d'été Iddddddddddddddddddddddddd",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 175000,
+      "typeRoom": "rooms2Person",
+      "placeNumber": 2,
+      "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms2Person",
-      "available": 1
+      "typeRoom": "rooms2Person"
     },
     {
       "id": 3,
-      "title": "Chambre loyau III",
+      "title": "Chambre d'été III",
       "image": "https://t4.ftcdn.net/jpg/01/66/35/45/240_F_166354596_LIr9E3OP6zOJYUWx0z9KAOSp8VKiQsvb.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 171000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms2Person",
-      "available": 1
+      "typeRoom": "rooms2Person"
     },
     {
       "id": 4,
@@ -61,8 +62,7 @@
       "pricePerNight": 175000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms2Person",
-      "available": 0
+      "typeRoom": "rooms2Person"
     },
     {
       "id": 5,
@@ -72,41 +72,37 @@
       "pricePerNight": 175000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms4Person",
-      "available": 1
+      "typeRoom": "rooms4Person"
     },
     {
       "id": 6,
-      "title": "Chambre Duplex II",
+      "title": "Chambre d'été II",
       "image": "https://t3.ftcdn.net/jpg/02/71/08/28/240_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 170000,
       "adult": 2,
       "children": 5,
-      "typeRoom": "rooms4Person",
-      "available": 1
+      "typeRoom": "rooms4Person"
     },
     {
       "id": 7,
-      "title": "Chambre Double III",
+      "title": "Chambre d'été III",
       "image": "https://t4.ftcdn.net/jpg/01/66/35/45/240_F_166354596_LIr9E3OP6zOJYUWx0z9KAOSp8VKiQsvb.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 175000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms4Person",
-      "available": 1
+      "typeRoom": "rooms4Person"
     },
     {
       "id": 8,
-      "title": "Chambre Royale VI",
+      "title": "Chambre d'été VI",
       "image": "https://t4.ftcdn.net/jpg/03/14/18/93/240_F_314189357_XfwtOLZy1dEJr1J5V3bV8BlqfgDBvbbI.jpg",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
       "pricePerNight": 165000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "rooms4Person",
-      "available": 1
+      "typeRoom": "rooms4Person"
     },
     {
       "id": 9,
@@ -116,8 +112,7 @@
       "pricePerNight": 175000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "suite",
-      "available": 1
+      "typeRoom": "suite"
     },
     {
       "id": 10,
@@ -127,8 +122,7 @@
       "pricePerNight": 170000,
       "adult": 2,
       "children": 5,
-      "typeRoom": "suite",
-      "available": 0
+      "typeRoom": "suite"
     },
     {
       "id": 11,
@@ -138,8 +132,7 @@
       "pricePerNight": 165000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "suite",
-      "available": 1
+      "typeRoom": "suite"
     },
     {
       "id": 12,
@@ -149,13 +142,12 @@
       "pricePerNight": 165000,
       "adult": 2,
       "children": 4,
-      "typeRoom": "suite",
-      "available": 1
+      "typeRoom": "suite"
     }
   ],
   "users": [
     {
-      "id": 2,
+      "id": 1,
       "firstName": "John test",
       "lastName": "Doe",
       "email": "hotel-reservations-manager@test.com",
@@ -165,22 +157,22 @@
       "role": "hotel-reservations-manager"
     },
     {
-      "id": 3,
-      "firstName": "Michelle",
-      "lastName": "MAKISSI",
-      "email": "project-manager@test.com",
-      "phone": "0598562312",
-      "password": "123456789",
-      "isActive": true,
-      "role": "project-manager"
-    },
-    {
       "firstName": "Amadou Benthe",
       "lastName": "DIALLO",
       "email": "amadbenthebagnandiallo@gmail.com",
       "phone": "+225 84 10 87 16",
       "role": "hotel-reservations-manager",
       "id": "496fe6ef-a86d-4153-bde0-e09df204f1c5",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "aaaaaaaaa",
+      "lastName": "AAAA",
+      "email": "azertyu@test.test",
+      "phone": "62530",
+      "role": "hotel-reservations-manager",
+      "id": "cbdd72da-46de-4b0b-81d8-72da828752b8",
       "isActive": true,
       "password": "password"
     }

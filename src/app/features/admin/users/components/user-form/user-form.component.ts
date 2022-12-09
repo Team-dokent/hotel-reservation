@@ -71,7 +71,6 @@ export class UserFormComponent {
         this.onNoClick();
       });
     } else {
-      console.log('Update user');
       const userDataForm: UserForm = {
         ...this.form.value,
       };
