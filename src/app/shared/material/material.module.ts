@@ -16,7 +16,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTabsModule} from '@angular/material/tabs';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule} from '@angular/material/tooltip';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 
 const materialModules = [
   MatButtonModule,
@@ -39,6 +41,9 @@ const materialModules = [
   MatDialogModule,
   MatTabsModule,
   MatTooltipModule,
+  MatNativeDateModule,
+  MatRippleModule,
+  MatAutocompleteModule
 ];
 
 @NgModule({

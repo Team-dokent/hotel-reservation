@@ -1,4 +1,3 @@
-<app-header></app-header>
 
 <section class="banner_area">
   <div class="booking_table d_flex align-items-center">
@@ -12,7 +11,7 @@
       <div class="banner_content text-center justify-content-center">
         <span class="fs-6 mb-4">L'offre se termine dans 10 jours</span>
         <h1>
-          <span class="h2"> Hôte Paradis</span> <br />
+          <span class="h2"> Hôtel Paradis</span> <br />
           <span class="d-none d-md-block d-lg-block"
             >vous sauhaite la bienvenue.</span
           >
@@ -24,16 +23,16 @@
       </div>
     </div>
   </div>
-  <div class="hotel_booking_area position">
+  <div class="hotel_booking_area position ">
     <div class="container">
-      <div class="hotel_booking_table d-none d-md-none d-lg-flex">
-        <div class="col-lg-3 col-md-12 col-12 text-center">
-          <h2 class="text-yellow">
+      <div class="hotel_booking_table d-none d-md-none d-lg-flex rounded">
+        <div class="col-lg-3 col-md-12 col-12 text-center reservation">
+          <h2 class="text-yellow h2">
             Reserver<br />
             une chambre
           </h2>
         </div>
-        <div class="col-lg-6 col-md-12 col-12">
+        <!-- <div class="col-lg-6 col-md-12 col-12">
           <div class="row">
             <div class="col-lg-6">
               <input
@@ -89,7 +88,12 @@
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
+        <div class="col-lg-9 col-md-12 col-12 booking">
+
+            <app-booking-shared ></app-booking-shared>
+          
+        </div> 
       </div>
     </div>
   </div>
@@ -118,13 +122,13 @@
         </div>
         <p>L'HÔTEL PARADIS</p>
         <h2 class="text-dark h1">Expérience de luxe</h2>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="4000">
           Bienvenue dans le meilleur hôtel cinq étoiles de luxe d'Abidjan.
           L'élément hôtel seuse le vestibule aucan certains juste dans le sapien
           rutrum volutpat. Jusqu'à ce qu'il veuille les enfants. Jusqu'à ce
           qu'il veuille mettre l'arc sur le blane.
         </p>
-        <p>
+        <p data-aos="fade-up" data-aos-duration="3000">
           L'hôtel est un lieu de nidification et non un élément détestable. Les
           orcs, nés avec des plumes et de grosses pousses, donneront naissance à
           une souris ridicule née sur la montagne, et ils habiteront dans la
@@ -155,7 +159,7 @@
           }"
           [pagination]="{ clickable: true }"
         >
-          <ng-template swiperSlide>
+          <ng-template swiperSlide >
             <img
               src="https://themeydanhotel.com/sites/default/files/2018-08/ROOM.jpg"
             />
@@ -192,7 +196,7 @@
 </section>
 
 <section class="mt-25 bg-secondary py-5" id="differencePrice">
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
     <h2 class="text-dark text-center h1">Nos differents prix</h2>
     <div class="row">
       <swiper
@@ -288,8 +292,9 @@
     data-stellar-ratio="0.8"
     data-stellar-vertical-offset="0"
     data-background=""
+    
   ></div>
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
     <div class="section_title text-center">
       <h2 class="title_w h1">Nos differents services</h2>
     </div>
@@ -316,8 +321,22 @@
               alt=""
             />
           </div>
-          <div class="con">
-            <h5><a href="#">Chambre</a></h5>
+          <div class="con" >
+            <h5><a href="/rooms2Persons">Chambre 2 Personnes</a></h5>
+            <div class="line mt-3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="item">
+          <div class="position-re o-hidden">
+            <img
+              src="https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/173581390.jpg?k=7dcd0a4c58029b04e1905aae3159a0eb97e7b174328828d280911e68dea30e4c&o=&hp=1"
+              alt=""
+            />
+          </div>
+          <div class="con" >
+            <h5><a href="/rooms4Persons">Chambre 4 Personnes</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
@@ -331,12 +350,12 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Suite</a></h5>
+            <h5><a href="/roomsSuite">Suite</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="item">
           <div class="position-re o-hidden">
             <img
@@ -345,12 +364,12 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Bar</a></h5>
+            <h5><a >Bar</a></h5>
             <div class="line mt-3"></div>
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="item">
           <div class="position-re o-hidden">
             <img
@@ -359,7 +378,9 @@
             />
           </div>
           <div class="con">
-            <h5><a href="#">Restaurant </a></h5>
+            <h5>
+              <a href="/restaurant">Restaurant </a>
+            </h5>
             <div class="line mt-3"></div>
           </div>
         </div>
@@ -377,14 +398,14 @@
       background-attachment: fixed;
     ">
     
-  <div class="container">
+  <div class="container" data-aos="fade-up" data-aos-duration="3000">
     <h2 class="text-dark text-center h1">Chambres & Suites</h2>
     <div class="row mb_30" >
-      <app-list-rooms   [listRooms]="rooms" [typeRom]="typeRoom2"></app-list-rooms>
+      <app-design1-list-rooms  [listRooms]="rooms" [typeRom]="typeRoom2"></app-design1-list-rooms>
     </div>
 
     <div class="row mb_30 mt-2">
-      <app-list-rooms   [listRooms]="rooms" [typeRom]="typeSuite"></app-list-rooms>
+      <app-design1-list-rooms  [listRooms]="rooms" [typeRom]="typeSuite"></app-design1-list-rooms>
     </div>
   </div>
 </section>
@@ -401,5 +422,3 @@
   loading="lazy"
   referrerpolicy="no-referrer-when-downgrade"
 ></iframe>
-
-<app-footer></app-footer>

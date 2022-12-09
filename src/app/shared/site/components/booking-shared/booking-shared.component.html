@@ -1,51 +1,103 @@
+<form [formGroup]="formBooking" (ngSubmit)="handleOnSubmit()">
 
-<form action="">
-<!--    
-    <mat-form-field appearance="fill" class="w-100">
-        <mat-label>Enter a date range</mat-label>
-        <mat-date-range-input [rangePicker]="picker">
-          <input matStartDate placeholder="Start date">
-          <input matEndDate placeholder="End date">
-        </mat-date-range-input>
-        <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-date-range-picker #picker></mat-date-range-picker>
-    </mat-form-field> -->
-      
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-3 col-6  text-truncate">
+    
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label class="text-dark fs-6">Chambre</mat-label>
+                    <mat-select formControlName="roomId">
+                        <mat-option *ngFor="let room of rooms " [value]="room.id">
+                            {{room.title}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+                <div class="text-danger  p-0 m-0" *ngIf="myFormControls['roomId'].touched && myFormControls['roomId'].invalid">
+                    <i class="text-nowrap" *ngIf="myFormControls['roomId'].errors?.['required']">
+                        La chambre est obligatoire !
+                    </i>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-3 col-6 ">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label class="text-dark fs-6">Période/date</mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate formControlName="start" placeholder="Début">
+                        <input matEndDate formControlName="end" placeholder="Fin">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+                <div class="text-danger p-0 m-0" *ngIf="myFormControls['start'].touched && myFormControls['start'].invalid">
+                    <i *ngIf="myFormControls['start'].errors?.['required']">
+                        La date de début est obligatoire !
+                    </i>
+                </div>
+                <div class="text-danger p-0 m-0" *ngIf="myFormControls['end'].touched && myFormControls['end'].invalid">
+                    <i *ngIf="myFormControls['end'].errors?.['required']">
+                        La date de fin est obligatoire !
+                    </i>
+                </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-3 col-6 text-truncate">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label class="text-dark fs-6">Adulte</mat-label>
+                    <mat-select formControlName="adult">
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                    </mat-select>
+                    <mat-icon matSuffix color="warn">person_add</mat-icon>
+                </mat-form-field>
+                <div class="text-danger p-0 m-0" *ngIf="myFormControls['adult'].touched && myFormControls['phone'].invalid">
+                    <i *ngIf="myFormControls['adult'].errors?.['required']">
+                        Adulte est obligatoire !
+                    </i>
+                </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-3 col-6 text-truncate">
+                <mat-form-field appearance="outline" class="w-100 py-2">
+                    <mat-label class="text-dark fs-6">Numéro de téléphone</mat-label>
+                    <input matInput formControlName="phone" placeholder="Placeholder">
+                    <mat-icon matSuffix color="warn">phone</mat-icon>
+                </mat-form-field>
+                <div class="text-danger p-0 m-0" *ngIf="myFormControls['phone'].touched && myFormControls['phone'].invalid">
+                    <i *ngIf="myFormControls['phone'].errors?.['required']">
+                        Téléphone est obligatoire !
+                    </i>
+                    <i *ngIf="myFormControls['phone'].errors?.['pattern']">
+                        Téléphone est incorrect !
+                    </i>
+                    <i class="" *ngIf="myFormControls['phone'].errors?.['minlength']">
+                        Téléphone doit avoir au moins 10 chiffres!
+                    </i>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-3 col-6 text-center text-truncate ">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label class="text-dark fs-6">Email</mat-label>
+                    <input formControlName="email" matInput placeholder="pat@example.com" />
+                    <mat-icon matSuffix color="warn"> email</mat-icon>
+                </mat-form-field>
+                <div class="text-danger p-0 m-0" *ngIf="myFormControls['email'].touched && myFormControls['email'].invalid">
+                    <i *ngIf="myFormControls['email'].errors?.['required']">
+                        Mail est obligatoire !
+                    </i>
+                    <i *ngIf="myFormControls['email'].errors?.['pattern']">
+                        Adresse mail est incorrect !
+                    </i>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-3 col-6 ">
+                <button mat-raised-button type="submit" class="w-100 py-2 mb-3 bg-red text-white">
+                    Reserver
+                </button>
+            </div>
+        </div>
+    </div>
 
-
-    <mat-form-field appearance="outline" class="w-100">
-        <mat-label class="text-dark">Enfant</mat-label>
-        <mat-select  name="food">
-            <mat-option value="1">1</mat-option>
-            <mat-option value="2">2</mat-option>
-            <mat-option value="3">3</mat-option>
-            <mat-option value="4">4</mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="w-100">
-        <mat-label class="text-dark">Adulte</mat-label>
-        <mat-select  name="food">
-          <mat-option value="1">1</mat-option>
-          <mat-option value="2">2</mat-option>
-          <mat-option value="3">3</mat-option>
-          <mat-option value="4">4</mat-option>
-        </mat-select>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="w-100">
-        <mat-label class="text-dark">Numéro de téléphone</mat-label>
-        <input matInput placeholder="Placeholder">
-        <mat-icon matSuffix>phone</mat-icon>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline" class="w-100">
-        <mat-label>Email</mat-label>
-        <input formControlName="email" matInput placeholder="pat@example.com" />
-    </mat-form-field>
-
-    <button mat-raised-button class="w-100 mb-3 bg-red text-white">
-        Reserver
-    </button>
 </form>

@@ -8,4 +8,5 @@ export class RoomsModal {
     children! : number;
     typeRoom! : string;
     totalRoom! : number;
+    available! : number;
 }

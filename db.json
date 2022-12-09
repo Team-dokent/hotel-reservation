@@ -21,7 +21,7 @@
   ],
   "rooms": [
     {
-      "id": 12,
+      "id": 1,
       "title": "Suite d'été VI",
       "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
@@ -32,6 +32,45 @@
       "available": 1,
       "placeNumber": 2,
       "createdAt": "2013"
+    },
+    {
+      "id": 2,
+      "title": "Suite d'été VI",
+      "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
+      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
+      "pricePerNight": 165000,
+      "adult": 2,
+      "children": 4,
+      "typeRoom": "suite",
+      "available": 1,
+      "placeNumber": 2,
+      "createdAt": "2013"
+    },
+    {
+      "id": 3,
+      "title": "Suite d'été VI",
+      "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
+      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
+      "pricePerNight": 165000,
+      "adult": 2,
+      "children": 4,
+      "typeRoom": "suite",
+      "available": 1,
+      "placeNumber": 2,
+      "createdAt": "2013"
+    },
+    {
+      "title": "Chambre 21",
+      "description": "azertyuiop",
+      "pricePerNight": 25000,
+      "typeRoom": "rooms-for-2-people",
+      "placeNumber": 2,
+      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
+      "id": "ce151342-bcef-48a2-a167-fc427f59ed81",
+      "adult": 2,
+      "children": 2,
+      "createdAt": "2022-12-09T12:13:30.070Z",
+      "available": 0
     }
   ],
   "reservations": [
@@ -52,7 +91,7 @@
       "roomId": 6,
       "phone": "0748753781",
       "email": "diallo@gmail.com",
-      "status": "pending",
+      "status": "rejected",
       "id": 2
     },
     {
@@ -62,7 +101,7 @@
       "roomId": 6,
       "phone": "0748753781",
       "email": "benthe@gmail.com",
-      "status": "pending",
+      "status": "validated",
       "id": 3
     },
     {
@@ -105,7 +144,7 @@
       "phone": "0598562312",
       "password": "123456789",
       "isActive": true,
-      "role": "hotel-manager"
+      "role": "hotel-reservations-manager"
     },
     {
       "firstName": "Amadou Benthe",
@@ -144,6 +183,26 @@
       "phone": "+225 84 10 87 16",
       "role": "hotel-reservations-manager",
       "id": "89ea1147-52dd-4953-a005-f5f2310eb7b8",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "018ae788-13e0-4239-b1fc-bf2f277e3ee6",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "c36595c3-584a-42a9-b698-9ea5eca20260",
       "isActive": true,
       "password": "password"
     }

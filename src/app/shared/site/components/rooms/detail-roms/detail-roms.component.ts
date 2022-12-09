@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit,Input, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RoomsModal } from 'src/app/core/models/site/rooms/rooms';
 import { RoomsService } from 'src/app/core/services/site/rooms/rooms.service';
@@ -17,7 +17,10 @@ SwiperCore.use([Autoplay,EffectCube,Navigation, Pagination, Scrollbar, A11y]);
 })
 export class DetailRomsComponent implements OnInit {
 
-  room! : RoomsModal;
+  //room! : RoomsModal;
+
+  @Input() room! : RoomsModal;
+  @Input() roomDetail! : RoomsModal;
 
   constructor(
     private route: ActivatedRoute,
@@ -39,10 +42,9 @@ export class DetailRomsComponent implements OnInit {
 
       next: (data) => {
        
-        this.room = data
+        this.room = data;
+        this.roomDetail = data;
 
-        console.log(this.room);
-        
       },
       error: (err) => {
         console.log('Err: ', +err);

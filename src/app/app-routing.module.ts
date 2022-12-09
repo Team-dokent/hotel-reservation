@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'home',
+    path: '',
     loadChildren: () =>
       import('./features/site/site.module').then((m) => m.SiteModule),
   },
@@ -20,6 +20,11 @@ const routes: Routes = [
       import('./features/admin/admin.module').then((m) => m.AdminModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: '**',
+    pathMatch : 'full',
+    redirectTo: '',
+  }
 ];
 
 @NgModule({

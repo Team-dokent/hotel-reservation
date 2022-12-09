@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-12" *ngFor="let r of listRooms "   >
+        <div class="accomodation_item text-center" *ngIf="r.typeRoom == typeRom" data-aos="fade-up" data-aos-duration="3000">
+          <div class="hotel_img">
+            <a   href="/room/{{r.id}}"  title="{{r.title}}">
+              <img
+                  src="{{r.image}}"
+                  alt=""
+                  width="auto"
+                  height="250"
+                  style="background-size:cover;object-fit: cover;"
+                />
+            </a>
+            <a  href="/room/{{r.id}}" title="{{r.title}}" class="theme_btn button_hover  bg-red text-white rounded">Reserver </a>
+          </div>
+           <a href="/room/{{r.id}}" title="{{r.title}}" >
+            <h4 class="sec_h4">{{r.title}}</h4>
+          </a>
+          <!-- <a  [routerLink]="['/room', r.id]" title="{{r.title}}" >
+            <h4 class="sec_h4">{{r.title}}</h4>
+          </a> -->
+          <i ></i>
+          <h5>{{r.pricePerNight}} fcfa<small>/nuit</small></h5>
+          <i class="text-danger py-4"
+              *ngIf="r.available == 1"
+              >
+              Oups! cette chambre est occupée
+        
+          </i>
+        </div>
+    </div>
+</div>
