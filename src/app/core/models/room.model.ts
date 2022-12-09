@@ -7,7 +7,7 @@ export interface Room {
   adult: number;
   children: number;
   typeRoom: string;
-  createdAt: Date;
-  placeNumber: number;
   available: number;
+  placeNumber: number;
+  createdAt: Date;
 }

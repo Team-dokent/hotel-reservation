@@ -37,7 +37,7 @@ export class AuthService {
         if (user) {
           this.tokenService.saveToken(user);
           this.openSnackBar('Connection avec success');
-          this.router.navigate(['admin/dashboard']);
+          this.router.navigate(['admin/users']);
         } else {
           this.openSnackBar("Cet utilisateur n'existe pas");
         }

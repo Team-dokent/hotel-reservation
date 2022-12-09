@@ -58,8 +58,8 @@ export class ReservationsComponent implements OnInit {
   currentUser!: User | null;
   displayedColumns: string[] = [
     'email',
-    'dateDebut',
-    'dateEnd',
+    'start',
+    'end',
     'phone',
     'status',
     'actions',
