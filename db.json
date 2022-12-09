@@ -21,128 +21,69 @@
   ],
   "rooms": [
     {
-      "id": 2,
-      "title": "Chambre d'été I",
-      "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
+      "id": 12,
+      "title": "Suite d'été VI",
+      "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
       "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
-      "pricePerNight": 175000,
+      "pricePerNight": 165000,
       "adult": 2,
       "children": 4,
       "typeRoom": "suite",
-      "createdAt": "2013",
-      "placeNumber": null
-    },
-    {
-      "title": "Chambre d'été Iddddddddddddddddddddddddd",
-      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
-      "pricePerNight": 175000,
-      "typeRoom": "rooms2Person",
+      "available": 1,
       "placeNumber": 2,
-      "image": "https://t3.ftcdn.net/jpg/02/94/19/40/240_F_294194023_disE35GtlVLDQx4caNDaWewZI8LbxWFQ.jpg",
-      "adult": 2,
-      "children": 2,
-      "id": 3,
-      "createdAt": "2022-12-07T18:22:08.694Z"
-    },
-    {
-      "title": "Chambre 7",
-      "description": "DIALLO",
-      "pricePerNight": 4444,
-      "typeRoom": "rooms-for-2-people",
-      "placeNumber": 555555,
-      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "be53601b-c2cc-400c-a451-b409d8034f09"
-    },
-    {
-      "title": "Chambre 25",
-      "description": "ssssssssssssssssssss",
-      "pricePerNight": 444,
-      "typeRoom": "rooms-for-4-people",
-      "placeNumber": 4444,
-      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "2cb93ddc-34b3-4fa1-a06d-1a92c7455106"
-    },
-    {
-      "title": "Chambre de qqqqq",
-      "description": "ssssssssssssssss",
-      "pricePerNight": 78,
-      "typeRoom": "rooms-for-4-people",
-      "placeNumber": 5555,
-      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "e9648824-5d15-4cc6-95a5-b1df3181806c"
-    },
-    {
-      "title": "Chmbre test",
-      "description": "Chamùbre test description",
-      "pricePerNight": 52,
-      "typeRoom": "sequels",
-      "placeNumber": 56,
-      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "060f58dc-df74-4a7e-b15f-38c800983bf2"
-    },
-    {
-      "title": "Cambre 52dd",
-      "description": "azertyuiop^$$",
-      "pricePerNight": 80,
-      "typeRoom": "rooms-for-4-people",
-      "placeNumber": 52,
-      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
-      "id": "6423e44d-45a3-4d06-94ce-e937ff97c881",
-      "adult": 2,
-      "children": 2,
-      "createdAt": "2022-12-08T14:54:33.312Z"
+      "createdAt": "2013"
     }
   ],
   "reservations": [
     {
-      "id": "number",
-      "dateStart": "string",
-      "dateEnd": "string",
-      "roomsId": "number",
-      "typeRoom": "string",
-      "email": "string",
-      "phone": "string",
-      "status": "validated"
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "validated",
+      "id": 1
     },
     {
-      "id": "number",
-      "dateStart": "string",
-      "dateEnd": "string",
-      "roomsId": "number",
-      "typeRoom": "string",
-      "email": "string",
-      "phone": "string",
-      "status": "rejected"
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "diallo@gmail.com",
+      "status": "pending",
+      "id": 2
     },
     {
-      "id": "number",
-      "dateStart": "string",
-      "dateEnd": "string",
-      "roomsId": "number",
-      "typeRoom": "string",
-      "email": "string",
-      "phone": "string",
-      "status": "validated"
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "benthe@gmail.com",
+      "status": "pending",
+      "id": 3
     },
     {
-      "id": "number",
-      "dateStart": "string",
-      "dateEnd": "string",
-      "roomsId": "number",
-      "typeRoom": "string",
-      "email": "string",
-      "phone": "string",
-      "status": "pending"
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "makissi@gmail.com",
+      "status": "pending",
+      "id": 4
     },
     {
-      "id": "number",
-      "dateStart": "string",
-      "dateEnd": "string",
-      "roomsId": "number",
-      "typeRoom": "string",
-      "email": "string",
-      "phone": "string",
-      "status": "pending"
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "michelle@gmail.com",
+      "status": "pending",
+      "id": 5
     }
   ],
   "users": [
@@ -157,14 +98,24 @@
       "role": "hotel-reservations-manager"
     },
     {
+      "id": 2,
+      "firstName": "John test",
+      "lastName": "Doe",
+      "email": "hotel-manager@test.com",
+      "phone": "0598562312",
+      "password": "123456789",
+      "isActive": true,
+      "role": "hotel-manager"
+    },
+    {
       "firstName": "Amadou Benthe",
       "lastName": "DIALLO",
-      "email": "amadbenthebagnandiallo@gmail.com",
+      "email": "project-manager@test.com",
       "phone": "+225 84 10 87 16",
       "role": "hotel-reservations-manager",
       "id": "496fe6ef-a86d-4153-bde0-e09df204f1c5",
       "isActive": true,
-      "password": "password"
+      "password": "12345678"
     },
     {
       "firstName": "aaaaaaaaa",
@@ -173,6 +124,26 @@
       "phone": "62530",
       "role": "hotel-reservations-manager",
       "id": "cbdd72da-46de-4b0b-81d8-72da828752b8",
+      "isActive": true,
+      "password": "12345678"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "project-manager",
+      "id": "49e4a205-2431-4de4-b41b-60d5d53fc81e",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "Makissi",
+      "lastName": "Michelle",
+      "email": "mkisssi@test.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "89ea1147-52dd-4953-a005-f5f2310eb7b8",
       "isActive": true,
       "password": "password"
     }
