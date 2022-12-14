@@ -1,5 +1,5 @@
 export class User {
-  id!: number;
+  id!: number | string;
   firstName!: string;
   lastName!: string;
   email!: string;
@@ -7,4 +7,10 @@ export class User {
   password!: string;
   role!: string;
   isActive!: boolean;
+}
+
+export enum Profile {
+  HotelManager = 'hotel-manager',
+  HotelReservationsManager = 'hotel-reservations-manager',
+  ProjectManager = 'project-manager',
 }

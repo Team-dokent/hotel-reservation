@@ -1,0 +1,53 @@
+
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-img {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  
+}
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-img img {
+  border-radius: 10px 10px 0 0;
+  transition: .35s;
+  width: 100%;
+}
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-content {
+  background: #fff;
+  box-shadow: 0 0 30px -1px rgba(0, 0, 0, .08);
+  border-radius: 0 0 10px 10px;
+  margin-top: -15px;
+  position: relative;
+
+}
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-content .price-tag span {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f3c300
+}
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-content h3 {
+  margin-bottom: 2px;
+  padding-top: 2px
+}
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-content h3 a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: .03em;
+  text-transform: capitalize;
+  color: #1C171D;
+  transition: .35s
+}
+
+.room-suits-page-2 .room-suits-wrrap .room-suits-content h3:hover a {
+  color: #f3c200b4;
+  
+}
+
+.room-suits-page-2 .room-suits-wrrap:hover .room-suits-img img {
+  transform: scale(1.1);
+ 
+}

@@ -1,0 +1,86 @@
+<section class="bg-secondary">
+    <div class="container py-5">
+        <div class="row">
+            <app-design2-booking [typeRom]="typeRom"></app-design2-booking>
+        </div>
+    </div>
+</section>
+
+
+<div class="room-suits-page-2 pt-120 mb-120">
+    <div class="container">
+        <div class="row  py-5">
+            <div class="col-lg-3 col-md-6 col-10" *ngFor="let r of listRooms   ">
+                <div class="room-suits-wrrap"  *ngIf="r.typeRoom === typeRom" >
+                    <div class="room-suits-img ">
+                        <img src="{{r.image}}" alt="{{r.title}}" width="auto" height="250"
+                            style="background-size:cover;object-fit: cover;">
+                    </div>
+                    <div class="room-suits-content text-center mt-1 py-2">
+                        <div class="client-review">
+                            <ul class="stars d-flex align-items-center justify-content-center">
+                                <svg style="width: 24px; height: 24px; color: #f3c303fe" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                                </svg>
+                                <svg style="width: 24px; height: 24px; color: #f3c303fe" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                                </svg>
+                                <svg style="width: 24px; height: 24px; color: #f3c303fe" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                                </svg>
+                                <svg style="width: 24px; height: 24px; color: #f3c303fe" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                                </svg>
+                                <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+                                </svg>
+                                <span>(5.0)</span>
+                            </ul>
+                        </div>
+                        <div class="price-tag">
+                            <span class="text-yellow"> {{r.pricePerNight}} fcfa</span> /nuit
+                        </div>
+                        <h3>
+                            <a class="text-decoration-none" href="/room/{{r.id}}" title="{{r.title}}">
+                                {{r.title}}
+                            </a>
+                            <!-- <a class="text-decoration-none" href="/room/{{r.id}}" [routerLink]="['/room', r.id]">
+                                {{r.title}}
+                            </a> -->
+                        </h3>
+                        <div class="py-0 d-flex align-items-center justify-content-center">
+                            <div class="d-flex ">
+                                <p>
+                                    <span class="mx-1">
+                                        <svg style="width:24px;height:24px;color: #f3c303fe" viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M7 14C8.66 14 10 12.66 10 11C10 9.34 8.66 8 7 8C5.34 8 4 9.34 4 11C4 12.66 5.34 14 7 14M7 10C7.55 10 8 10.45 8 11C8 11.55 7.55 12 7 12C6.45 12 6 11.55 6 11C6 10.45 6.45 10 7 10M19 7H11V15H3V5H1V20H3V17H21V20H23V11C23 8.79 21.21 7 19 7M21 15H13V9H19C20.1 9 21 9.9 21 11Z" />
+                                        </svg>
+                                    </span>
+                                    2 Double lit
+                                </p>
+                            </div>
+                            <div class="d-flex ms-4">
+                                <p>
+                                    <span class="mx-1">
+                                        <svg style="width:24px;height:24px;color: #f3c303fe" viewBox="0 0 24 24">
+                                            <path fill="currentColor"
+                                                d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
+                                        </svg>
+                                    </span>
+                                    4 Invités
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

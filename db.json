@@ -1,14 +1,131 @@
 {
-  "users": [
+  "contact": [
+    {
+      "sujet": "test",
+      "message": "test",
+      "email": "sx@gmail.com",
+      "id": 8
+    },
+    {
+      "sujet": "hotel",
+      "message": "ijiji",
+      "email": "admin@infisoftware.net",
+      "id": 9
+    },
+    {
+      "sujet": "Je suis ",
+      "message": "djfdj",
+      "email": "admin@infisoftware.net",
+      "id": 10
+    }
+  ],
+  "rooms": [
     {
       "id": 1,
-      "firstName": "Amadou Benthe",
-      "lastName": "DIALLO",
-      "phone": "0598562312",
-      "password": "123456789",
-      "isActive": true,
-      "role": "hotel-manager"
+      "title": "Suite d'été VI",
+      "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
+      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
+      "pricePerNight": 165000,
+      "adult": 2,
+      "children": 4,
+      "typeRoom": "suite",
+      "available": 1,
+      "placeNumber": 2,
+      "createdAt": "2013"
     },
+    {
+      "id": 2,
+      "title": "Suite d'été VI",
+      "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
+      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
+      "pricePerNight": 165000,
+      "adult": 2,
+      "children": 4,
+      "typeRoom": "suite",
+      "available": 1,
+      "placeNumber": 2,
+      "createdAt": "2013"
+    },
+    {
+      "id": 3,
+      "title": "Suite d'été VI",
+      "image": "https://t-cf.bstatic.com/xdata/images/hotel/max1024x768/366334062.jpg?k=e974d64bd01056f542c1d8919ce7538d3625d104b4fcf23de739c0aebfc4ed02&o=&hp=1",
+      "description": "Non-fumeur•Minibar•Douche•Air conditionné•Télévision•Internet sans fil•Internet sans fil•Cafetière / Théière•Service en chambre•Linge de maison et serviettes fournis•TV par câble/satellite•Réveil•Sécurité 24h/24•Articles de toilette gratuits•Sèche-cheveux•Peignoirs fournis•Téléphone Service en chambre 24h/24 et 7j/7, blanchisserie, service de navette d'aéroport. L'hôtel Tiama propose un grand choix de chambres rénovées. Ses 137 chambres sont classées du classique à l'appartement et vous offrent tout le confort nécessaire à votre séjour.",
+      "pricePerNight": 165000,
+      "adult": 2,
+      "children": 4,
+      "typeRoom": "suite",
+      "available": 1,
+      "placeNumber": 2,
+      "createdAt": "2013"
+    },
+    {
+      "title": "Chambre 21",
+      "description": "azertyuiop",
+      "pricePerNight": 25000,
+      "typeRoom": "rooms-for-2-people",
+      "placeNumber": 2,
+      "image": "C:\\fakepath\\pexels-pixabay-60597.jpg",
+      "id": "ce151342-bcef-48a2-a167-fc427f59ed81",
+      "adult": 2,
+      "children": 2,
+      "createdAt": "2022-12-09T12:13:30.070Z",
+      "available": 0
+    }
+  ],
+  "reservations": [
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "aube@gmail.com",
+      "status": "validated",
+      "id": 1
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "diallo@gmail.com",
+      "status": "rejected",
+      "id": 2
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "benthe@gmail.com",
+      "status": "validated",
+      "id": 3
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "makissi@gmail.com",
+      "status": "pending",
+      "id": 4
+    },
+    {
+      "start": "2022-12-09T00:00:00.000Z",
+      "end": "2022-12-10T00:00:00.000Z",
+      "adult": "1",
+      "roomId": 6,
+      "phone": "0748753781",
+      "email": "michelle@gmail.com",
+      "status": "pending",
+      "id": 5
+    }
+  ],
+  "users": [
     {
       "id": 1,
       "firstName": "John test",
@@ -20,14 +137,74 @@
       "role": "hotel-reservations-manager"
     },
     {
-      "id": 1,
-      "firstName": "Michelle",
-      "lastName": "MAKISSI",
-      "email": "project-manager@test.com",
+      "id": 2,
+      "firstName": "John test",
+      "lastName": "Doe",
+      "email": "hotel-manager@test.com",
       "phone": "0598562312",
       "password": "123456789",
       "isActive": true,
-      "role": "project-manager"
+      "role": "hotel-reservations-manager"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "project-manager@test.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "496fe6ef-a86d-4153-bde0-e09df204f1c5",
+      "isActive": true,
+      "password": "12345678"
+    },
+    {
+      "firstName": "aaaaaaaaa",
+      "lastName": "AAAA",
+      "email": "azertyu@test.test",
+      "phone": "62530",
+      "role": "hotel-reservations-manager",
+      "id": "cbdd72da-46de-4b0b-81d8-72da828752b8",
+      "isActive": true,
+      "password": "12345678"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "project-manager",
+      "id": "49e4a205-2431-4de4-b41b-60d5d53fc81e",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "Makissi",
+      "lastName": "Michelle",
+      "email": "mkisssi@test.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "89ea1147-52dd-4953-a005-f5f2310eb7b8",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "018ae788-13e0-4239-b1fc-bf2f277e3ee6",
+      "isActive": true,
+      "password": "password"
+    },
+    {
+      "firstName": "Amadou Benthe",
+      "lastName": "DIALLO",
+      "email": "amadbenthebagnandiallo@gmail.com",
+      "phone": "+225 84 10 87 16",
+      "role": "hotel-reservations-manager",
+      "id": "c36595c3-584a-42a9-b698-9ea5eca20260",
+      "isActive": true,
+      "password": "password"
     }
   ],
   "posts": [

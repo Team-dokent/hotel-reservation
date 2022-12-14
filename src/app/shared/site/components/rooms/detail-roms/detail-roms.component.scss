@@ -1,0 +1,103 @@
+////@at-root swiper
+@import '~swiper/css';
+@import '~swiper/css/navigation';
+@import '~swiper/css/pagination';
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Mate+SC&display=swap');
+
+@import '/src/styles.scss';
+@import '/src/assets/site/scss/mixins';
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  // border-radius: 4px;
+  // padding: 0.75em 0.75em 0 0.75em;
+  height: 3rem;
+  border: 1px solid $primary ;
+}
+
+
+
+//@at-root swiper
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: lighten($color: $primary, $amount: 10);
+  @include widthHeightPx(60px, 60px);
+  border-radius: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $primary;
+}
+
+.swiper-pagination-bullet {
+  @include widthHeightPx(10px, 10px);
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  display: block;
+  @include widthHeightPx(100%, 35vh);
+}
+
+
+
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.text-yellow {
+  color: #9a7c06;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 125%;
+  bottom: 0;
+  z-index: -1;
+}
+
+/*=========== breadcrumb_area css =============*/
+
+.breadcrumb_area .bg-parallax {
+  background: url("https://themes.codezion.com/angular/toor/assets/images/hotels/2.jpg");
+  opacity: 0.80;
+  z-index: -1;
+}
+
+
+//Espace room
+.room  span{
+  color: #fff;
+  background-color: #e6a015;
+  padding: 5px 14px;
+  font-size: 1.2em;
+  margin: 5px;
+  border: 1px solid #deb666;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.room  span:hover{
+  background-color: #b69854;
+  border: 1px solid #b69854;
+}
+
+
+// detail image
+.detail-image  {
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
