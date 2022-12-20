@@ -8,9 +8,10 @@ import { MaterialModule } from './shared/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SiteLayoutComponent } from './layouts/site-layout/site-layout.component';
+import { GoHomeModalComponent } from './core/components/go-home-modal/go-home-modal.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, GoHomeModalComponent],
 
   imports: [
     BrowserModule,
